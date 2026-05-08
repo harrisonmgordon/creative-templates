@@ -1,0 +1,15 @@
+{
+  "layout": "n-by-n-grid",
+  "eyebrow": "Sick kid math",
+  "headlineHtml": "The next 2 hours, <span class=\"accent\">four ways.</span>",
+  "subhead": "Same fever. Different paths.",
+  "gridCols": 2,
+  "cells": [
+    { "label": "Urgent care", "big": "2.5 hr", "sub": "wait time" },
+    { "label": "Nurse line", "big": "Defaults to ER", "sub": "no exam, no Rx" },
+    { "label": "ER", "big": "$300+", "sub": "one copay" },
+    { "label": "Blueberry", "big": "~30 min", "sub": "$0, from couch", "hero": true }
+  ],
+  "offer": "$20/mo · No copays",
+  "cta": "Learn more"
+}

@@ -1,0 +1,10 @@
+{
+  "layout": "white-coat-portrait",
+  "name": "Dr. Sarah Miller, MD",
+  "role": "Board-Certified Pediatrician",
+  "credentials": ["MD", "FAAP", "Board-certified"],
+  "messageText": "Most fevers don't need an ER. They need a pediatrician who can see your child within 30 minutes — and tell you what's actually going on.",
+  "offer": "$20/mo · No copays",
+  "cta": "Check my benefit",
+  "finePrint": "Sponsored. Stand-in photograph for template preview."
+}

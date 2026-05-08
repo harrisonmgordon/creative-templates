@@ -1,0 +1,9 @@
+{
+  "layout": "diagonal-split",
+  "chaosLabel": "WebMD spiral",
+  "chaosHeadlineHtml": "Same phone. The wrong app open.",
+  "calmLabel": "Blueberry chat",
+  "calmHeadlineHtml": "Same phone. <span class=\"accent\">A pediatrician on the other end.</span>",
+  "offer": "$20/mo · ~30-min avg",
+  "cta": "Learn more"
+}

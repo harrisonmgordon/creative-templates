@@ -1,0 +1,12 @@
+{
+  "layout": "big-vs-big",
+  "headlineHtml": "One year of Blueberry <span class=\"accent\">is less than one urgent care copay.</span>",
+  "leftLabel": "Urgent care",
+  "leftBig": "$300+",
+  "leftSub": "One copay",
+  "rightLabel": "Blueberry",
+  "rightBig": "$240",
+  "rightSub": "Full year · unlimited",
+  "offer": "$20/mo · No copays",
+  "cta": "Sign up"
+}

@@ -1,0 +1,15 @@
+{
+  "layout": "pain-then-fix",
+  "eyebrow": "RIGHT NOW",
+  "painHeadlineHtml": "<span class=\"strike\">Sit in urgent care for 3 hours.</span>",
+  "escalations": [
+    "Pay $300 for a 15-minute visit.",
+    "Drive home with a sleeping kid in the backseat.",
+    "Hope the diagnosis was right."
+  ],
+  "fixLabel": "BLUEBERRY",
+  "fixHeadlineHtml": "Or text a pediatrician — <span class=\"accent\">on the couch.</span>",
+  "fixSubhead": "Median ~30 min. Otoscope in the kit. $0.",
+  "offer": "$20/mo · No copays",
+  "cta": "Sign up"
+}

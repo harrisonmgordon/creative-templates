@@ -1,0 +1,12 @@
+{
+  "layout": "3-card-horizontal",
+  "eyebrow": "Sick kid, midnight",
+  "headlineHtml": "Three doors. <span class=\"accent\">One opens fast.</span>",
+  "options": [
+    { "label": "ER", "detail": "4-hour wait" },
+    { "label": "Urgent care", "detail": "$75 copay" },
+    { "label": "Blueberry", "detail": "~30 min, $0", "hero": true }
+  ],
+  "offer": "$20/mo · No copays",
+  "cta": "Sign up"
+}

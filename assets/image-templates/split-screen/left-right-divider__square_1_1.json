@@ -1,0 +1,15 @@
+{
+  "layout": "left-right-divider",
+  "chaosLabel": "→ 2am on WebMD",
+  "searchQuery": "toddler 103 fever should I worry",
+  "searchResults": [
+    { "title": "9 Signs Your Toddler Needs the ER", "src": "WebMD · When to call 911" },
+    { "title": "High fever in toddlers: warning signs", "src": "Parents.com · Could be sepsis…" }
+  ],
+  "calmLabel": "→ On Blueberry",
+  "calmHeadlineHtml": "Stop Googling. <span class=\"accent\">Text a pediatrician.</span>",
+  "doctorName": "Dr. Patel · Blueberry",
+  "doctorMessage": "Tylenol now, fluids, recheck in 2 hours. I'll text you back. No ER tonight.",
+  "offer": "$20/mo · ~30-min avg",
+  "cta": "Learn more"
+}

@@ -1,0 +1,13 @@
+{
+  "layout": "two-column-vs",
+  "headlineHtml": "Sick kid? One tap <span class=\"accent\">beats the waiting room.</span>",
+  "subhead": "Compare the next 2 hours.",
+  "leftTitle": "Urgent care",
+  "leftRows": ["~2.5 hr wait", "$75 copay", "Drive to clinic"],
+  "leftTag": "→ Waiting room",
+  "rightTitle": "Blueberry",
+  "rightRows": ["~30-min avg", "No copays", "Stay on couch"],
+  "rightTag": "→ From the couch",
+  "offer": "$20/mo · No copays",
+  "cta": "Learn more"
+}

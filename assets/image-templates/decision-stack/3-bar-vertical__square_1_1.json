@@ -1,0 +1,11 @@
+{
+  "layout": "3-bar-vertical",
+  "headlineHtml": "2am. <span class=\"accent\">Third option.</span>",
+  "options": [
+    { "label": "ER", "detail": "4-hour wait" },
+    { "label": "Wait till Monday" },
+    { "label": "Text Blueberry", "detail": "Pediatrician on video in ~30 minutes.", "hero": true }
+  ],
+  "offer": "$20/mo · No copays",
+  "cta": "Sign up"
+}

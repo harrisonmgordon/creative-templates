@@ -1,0 +1,18 @@
+{
+  "layout": "x-vs-check-list",
+  "headlineHtml": "Blueberry <span class=\"accent\">in two columns.</span>",
+  "notLabel": "Not Blueberry",
+  "notItems": [
+    "Replacement for your PCP",
+    "Replacement for the ER",
+    "A nurse line"
+  ],
+  "isLabel": "Blueberry is",
+  "isItems": [
+    "Pediatrician on video in ~30 min",
+    "Otoscope + thermometer in the kit",
+    "$0 visits, 24/7, all 50 states"
+  ],
+  "offer": "$20/mo · No copays",
+  "cta": "Learn more"
+}

@@ -1,0 +1,11 @@
+{
+  "layout": "3-feature",
+  "headlineHtml": "Pediatric care, <span class=\"accent\">redesigned.</span>",
+  "features": [
+    { "icon": "1", "title": "24/7 video", "benefit": "A board-certified pediatrician on call any time." },
+    { "icon": "2", "title": "Otoscope kit", "benefit": "Real exam from your couch — not just advice." },
+    { "icon": "3", "title": "Rx in minutes", "benefit": "Prescriptions sent to your CVS while you wait." }
+  ],
+  "offer": "$20/mo · No copays",
+  "cta": "Sign up"
+}

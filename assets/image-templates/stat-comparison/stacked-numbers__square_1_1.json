@@ -1,0 +1,13 @@
+{
+  "layout": "stacked-numbers",
+  "eyebrow": "Time-to-care",
+  "headlineHtml": "From hours <span class=\"accent\">to minutes.</span>",
+  "leftLabel": "Urgent care",
+  "leftSub": "Drive + check-in + wait",
+  "leftBig": "2.5 hr",
+  "rightLabel": "Blueberry",
+  "rightSub": "Tap → video → Rx",
+  "rightBig": "~30 min",
+  "offer": "$20/mo · No copays",
+  "cta": "Sign up"
+}

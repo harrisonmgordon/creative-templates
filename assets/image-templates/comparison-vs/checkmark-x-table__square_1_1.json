@@ -1,0 +1,17 @@
+{
+  "layout": "checkmark-x-table",
+  "headlineHtml": "Why parents pick <span class=\"accent\">Blueberry.</span>",
+  "subhead": "What the comparison actually looks like.",
+  "columns": [
+    { "label": "Urgent care" },
+    { "label": "Blueberry", "hero": true }
+  ],
+  "features": [
+    { "label": "Can examine ears", "values": [false, true] },
+    { "label": "Same pediatrician", "values": [false, true] },
+    { "label": "Available 24/7", "values": [false, true] },
+    { "label": "$0 visit cost", "values": [false, true] }
+  ],
+  "offer": "$20/mo · No copays",
+  "cta": "Learn more"
+}

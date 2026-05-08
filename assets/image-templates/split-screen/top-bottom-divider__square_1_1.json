@@ -1,0 +1,15 @@
+{
+  "layout": "top-bottom-divider",
+  "chaosLabel": "→ 2am on WebMD",
+  "searchQuery": "baby rash red spots spreading fast",
+  "searchResults": [
+    { "title": "7 Deadly Rashes Never to Ignore", "src": "WebMD · Could be meningitis, Kawasaki…" },
+    { "title": "Is Your Baby's Rash an Emergency?", "src": "Parents.com · 9 warning signs to call 911…" }
+  ],
+  "calmLabel": "→ On Blueberry",
+  "calmHeadlineHtml": "Stop Googling. <span class=\"accent\">Text a pediatrician.</span>",
+  "doctorName": "Dr. Garbi · Blueberry",
+  "doctorMessage": "Looks like heat rash. Keep her in loose cotton, cool bath tonight. Text me if anything changes.",
+  "offer": "$20/mo · ~30-min avg",
+  "cta": "Learn more"
+}

@@ -1,0 +1,14 @@
+{
+  "layout": "not-is-pairs",
+  "headlineHtml": "What Blueberry <span class=\"accent\">is — and isn't.</span>",
+  "notLabel": "What Blueberry isn't",
+  "notItems": [
+    "Not a replacement for your PCP.",
+    "Not a replacement for real emergencies."
+  ],
+  "isLabel": "What Blueberry is",
+  "isHeadline": "A pediatrician in your pocket — for the 90% of stuff in between.",
+  "isSubhead": "2am fevers · weekend earaches · daycare pink eye.",
+  "offer": "$20/mo · No copays",
+  "cta": "Learn more"
+}

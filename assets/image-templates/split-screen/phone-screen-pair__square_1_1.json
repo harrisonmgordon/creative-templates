@@ -1,0 +1,16 @@
+{
+  "layout": "phone-screen-pair",
+  "centerHeadlineHtml": "Stop Googling. <span class=\"accent\">Text a pediatrician.</span>",
+  "chaosLabel": "→ 2am on WebMD",
+  "searchQuery": "baby rash spreading",
+  "searchResults": [
+    { "title": "7 Deadly Rashes", "src": "WebMD" },
+    { "title": "When to call 911", "src": "Parents.com" }
+  ],
+  "calmLabel": "→ On Blueberry",
+  "calmHeadlineHtml": "Same phone. <span class=\"accent\">Different night.</span>",
+  "doctorName": "Dr. Garbi",
+  "doctorMessage": "Heat rash. Cool bath, loose cotton. Text me if it changes.",
+  "offer": "$20/mo · ~30-min avg",
+  "cta": "Learn more"
+}

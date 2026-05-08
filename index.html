@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Blueberry Creative Templates Overview</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --surface: #161a22;
+    --surface-2: #1e2330;
+    --border: #2a3140;
+    --ink: #e6e9ef;
+    --ink-dim: #9aa3b2;
+    --accent: #5b8def;
+    --accent-2: #7c5cff;
+    --warm: #f4a261;
+    --good: #4ade80;
+    --max: 1280px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.55;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code {
+    background: var(--surface-2);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
+  header.page-head {
+    background: linear-gradient(135deg, #14305c 0%, #2a1c5b 100%);
+    padding: 56px 32px 48px;
+    border-bottom: 1px solid var(--border);
+  }
+  .page-head .inner { max-width: var(--max); margin: 0 auto; }
+  .page-head h1 {
+    margin: 0 0 12px; font-size: 36px; font-weight: 700; letter-spacing: -0.5px;
+  }
+  .page-head .subtitle { color: #c4cad6; font-size: 16px; max-width: 720px; }
+  .page-head .stats {
+    margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap;
+    color: #c4cad6; font-size: 14px;
+  }
+  .page-head .stats span strong { color: #fff; font-size: 20px; display: block; }
+  .page-head .meta-line {
+    margin-top: 16px; color: #8590a3; font-size: 13px; font-family: ui-monospace, monospace;
+  }
+
+  nav.section-nav {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(14, 17, 22, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 32px;
+  }
+  nav.section-nav .inner {
+    max-width: var(--max); margin: 0 auto;
+    display: flex; gap: 16px; align-items: center; flex-wrap: wrap;
+  }
+  nav.section-nav a {
+    color: var(--ink-dim); font-size: 13px; padding: 4px 10px; border-radius: 4px;
+  }
+  nav.section-nav a:hover { color: var(--ink); background: var(--surface); text-decoration: none; }
+  nav.section-nav .label { color: var(--ink-dim); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  main { max-width: var(--max); margin: 0 auto; padding: 32px; }
+
+  section.template-section { margin: 56px 0 80px; }
+  section.template-section > h2 {
+    margin: 0 0 8px; font-size: 28px; font-weight: 700;
+    border-left: 4px solid var(--accent); padding-left: 16px;
+  }
+  section.template-section > .section-blurb {
+    color: var(--ink-dim); margin: 0 0 32px 20px; max-width: 720px;
+  }
+
+  details.toc-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 0 0 32px 20px;
+  }
+  details.toc-block summary {
+    cursor: pointer; color: var(--ink-dim); font-size: 13px;
+  }
+  details.toc-block .toc-link {
+    display: inline-block; margin: 4px 8px 4px 0;
+    color: var(--accent); font-size: 13px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .card:hover { border-color: var(--accent); }
+  .card-media {
+    background: #000;
+    aspect-ratio: 1 / 1;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .card-media .missing { color: #555; font-size: 13px; padding: 24px; text-align: center; }
+  .chassis-video, .tpl-thumb {
+    width: 100%; height: 100%; object-fit: contain; display: block;
+    background: #000;
+  }
+  .card-body { padding: 16px 18px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+  .card-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .card-head h3 {
+    margin: 0; font-size: 17px; font-weight: 600;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: #fff;
+  }
+  .badge {
+    font-size: 10px; padding: 2px 8px; border-radius: 999px; text-transform: uppercase;
+    letter-spacing: 0.5px; font-weight: 600;
+  }
+  .badge-main { background: rgba(91, 141, 239, 0.15); color: var(--accent); }
+  .badge-scene { background: rgba(244, 162, 97, 0.15); color: var(--warm); }
+  .badge-img { background: rgba(124, 92, 255, 0.15); color: var(--accent-2); }
+
+  .use-when, .structure, .summary, .layouts-line, .aspects, .meta {
+    margin: 0; font-size: 13px;
+  }
+  .summary { color: var(--ink); }
+  .meta { color: var(--ink-dim); font-size: 12px; }
+  .use-when strong, .structure strong, .layouts-line strong, .aspects strong {
+    color: var(--ink-dim); font-weight: 500;
+  }
+
+  .pill {
+    display: inline-block; margin: 2px 4px 2px 0;
+    background: var(--surface-2); color: var(--ink-dim);
+    padding: 1px 8px; border-radius: 4px;
+    font-size: 11px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  .pill-default { background: rgba(74, 222, 128, 0.12); color: var(--good); }
+
+  details { margin-top: 4px; }
+  details summary {
+    cursor: pointer; font-size: 12px; color: var(--ink-dim);
+    padding: 4px 0;
+  }
+  details summary:hover { color: var(--accent); }
+  details[open] summary { color: var(--ink); }
+  .render-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .render-cell { margin: 0; }
+  .render-cell img {
+    width: 100%; height: auto; display: block; border-radius: 4px;
+    background: #000;
+    border: 1px solid var(--border);
+  }
+  .render-cell figcaption {
+    font-size: 10px; color: var(--ink-dim);
+    padding: 4px 0 0; font-family: ui-monospace, monospace;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .desc {
+    font-size: 13px; color: var(--ink-dim);
+    background: var(--surface-2); padding: 12px; border-radius: 6px;
+    margin: 8px 0 0;
+  }
+  footer {
+    max-width: var(--max); margin: 32px auto 64px; padding: 0 32px;
+    color: var(--ink-dim); font-size: 12px; text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header class="page-head">
+  <div class="inner">
+    <h1>Blueberry Creative Templates Overview</h1>
+    <p class="subtitle">
+      The full creative template catalog — motion-native video chassis (rendered via HeyGen
+      HyperFrames) and static image templates (rendered via puppeteer-asset-render).
+      Stakeholder reference + brief-author cookbook in one page.
+    </p>
+    <div class="stats">
+      <span><strong>7</strong>main video chassis</span>
+      <span><strong>3</strong>scene variants</span>
+      <span><strong>30</strong>image templates</span>
+      <span><strong>95</strong>image layouts</span>
+      <span><strong>286</strong>example renders</span>
+    </div>
+    <p class="meta-line">Generated 2026-05-08 · agent: Ember · source: /workspace/.claude/skills/{meta-ad-video, puppeteer-asset-render}</p>
+  </div>
+</header>
+
+<nav class="section-nav">
+  <div class="inner">
+    <span class="label">Jump:</span>
+    <a href="#video-chassis">Video chassis</a>
+    <a href="#image-templates">Image templates</a>
+  </div>
+</nav>
+
+<main>
+
+<section class="template-section" id="video-chassis">
+  <h2>Video chassis</h2>
+  <p class="section-blurb">
+    Motion-native ad chassis at 9:16, 1:1, and 4:5. Each chassis ships HTML + GSAP
+    compositions with parameter slots for copy and brand assets. Renders below
+    auto-play muted; click an aspect link to open the full-resolution MP4.
+  </p>
+  <details class="toc-block">
+    <summary>Quick jump · 10 chassis</summary>
+    <div><a href="#chassis-before-after-scenario" class="toc-link">Before / After Scenario</a><a href="#chassis-before-after-scenario-scene" class="toc-link">Before / After — Scene Variant</a><a href="#chassis-cold-open" class="toc-link">Cold Open</a><a href="#chassis-if-then-rules" class="toc-link">If / Then Rules</a><a href="#chassis-letter-treatment" class="toc-link">Letter Treatment</a><a href="#chassis-letter-treatment-scene" class="toc-link">Letter Treatment — Scene Variant</a><a href="#chassis-quote-stagger" class="toc-link">Quote Stagger</a><a href="#chassis-stat-counter" class="toc-link">Stat Counter</a><a href="#chassis-us-vs-them" class="toc-link">Us vs Them</a><a href="#chassis-us-vs-them-scene" class="toc-link">Us vs Them — Scene Variant</a></div>
+  </details>
+  <div class="grid">
+    
+    <div class="card chassis-card" id="chassis-before-after-scenario">
+      <div class="card-media"><video class="chassis-video" autoplay muted loop playsinline preload="metadata" src="assets/video-chassis/before-after-scenario/1x1.mp4"></video></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>Before / After Scenario</h3>
+          <span class="badge badge-main">main chassis</span>
+        </div>
+        <p class="use-when"><strong>Use when:</strong> Life-context contrast — show the parent&#x27;s situation before Blueberry and after. NEVER body-state (no sick→healthy child shots).</p>
+        <p class="structure"><strong>Structure:</strong> life-context wipe (kitchen / car / bedroom scene change)</p>
+        <p class="aspects"><strong>Other aspects:</strong> <a href="assets/video-chassis/before-after-scenario/4x5.mp4" target="_blank">4x5</a> · <a href="assets/video-chassis/before-after-scenario/9x16.mp4" target="_blank">9x16</a></p>
+        <p class="meta">Slug: <code>before-after-scenario</code></p>
+      </div>
+    </div>
+    
+
+    <div class="card chassis-card" id="chassis-before-after-scenario-scene">
+      <div class="card-media"><video class="chassis-video" autoplay muted loop playsinline preload="metadata" src="assets/video-chassis/before-after-scenario-scene/1x1.mp4"></video></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>Before / After — Scene Variant</h3>
+          <span class="badge badge-scene">scene variant</span>
+        </div>
+        <p class="use-when"><strong>Use when:</strong> Scene variant with photographic life-context shots rather than illustrated environments.</p>
+        <p class="structure"><strong>Structure:</strong> photo life-context wipe</p>
+        <p class="aspects"><strong>Other aspects:</strong> <a href="assets/video-chassis/before-after-scenario-scene/4x5.mp4" target="_blank">4x5</a> · <a href="assets/video-chassis/before-after-scenario-scene/9x16.mp4" target="_blank">9x16</a></p>
+        <p class="meta">Slug: <code>before-after-scenario-scene</code></p>
+      </div>
+    </div>
+    
+
+    <div class="card chassis-card" id="chassis-cold-open">
+      <div class="card-media"><video class="chassis-video" autoplay muted loop playsinline preload="metadata" src="assets/video-chassis/cold-open/1x1.mp4"></video></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>Cold Open</h3>
+          <span class="badge badge-main">main chassis</span>
+        </div>
+        <p class="use-when"><strong>Use when:</strong> Hook + evidence-stagger + end-card. Best for shock-claim ads where the first second has to stop the scroll.</p>
+        <p class="structure"><strong>Structure:</strong> shock-claim → evidence stagger → end-card</p>
+        <p class="aspects"><strong>Other aspects:</strong> <a href="assets/video-chassis/cold-open/4x5.mp4" target="_blank">4x5</a> · <a href="assets/video-chassis/cold-open/9x16.mp4" target="_blank">9x16</a></p>
+        <p class="meta">Slug: <code>cold-open</code></p>
+      </div>
+    </div>
+    
+
+    <div class="card chassis-card" id="chassis-if-then-rules">
+      <div class="card-media"><video class="chassis-video" autoplay muted loop playsinline preload="metadata" src="assets/video-chassis/if-then-rules/1x1.mp4"></video></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>If / Then Rules</h3>
+          <span class="badge badge-main">main chassis</span>
+        </div>
+        <p class="use-when"><strong>Use when:</strong> Parent-voice listicle. Rules of thumb formatted as if-then statements (eyebrow + 4 rules cascade).</p>
+        <p class="structure"><strong>Structure:</strong> eyebrow + 4 rules slide-in cascade</p>
+        <p class="aspects"><strong>Other aspects:</strong> <a href="assets/video-chassis/if-then-rules/4x5.mp4" target="_blank">4x5</a> · <a href="assets/video-chassis/if-then-rules/9x16.mp4" target="_blank">9x16</a></p>
+        <p class="meta">Slug: <code>if-then-rules</code></p>
+      </div>
+    </div>
+    
+
+    <div class="card chassis-card" id="chassis-letter-treatment">
+      <div class="card-media"><video class="chassis-video" autoplay muted loop playsinline preload="metadata" src="assets/video-chassis/letter-treatment/1x1.mp4"></video></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>Letter Treatment</h3>
+          <span class="badge badge-main">main chassis</span>
+        </div>
+        <p class="use-when"><strong>Use when:</strong> Intimate clinician or founder letter. High-trust register; pairs with named real-person sign-off (e.g. Dr. Garbi).</p>
+        <p class="structure"><strong>Structure:</strong> typed salutation + 5-line body fade-up + key-sentence scale-up + named sign-off</p>
+        <p class="aspects"><strong>Other aspects:</strong> <a href="assets/video-chassis/letter-treatment/4x5.mp4" target="_blank">4x5</a> · <a href="assets/video-chassis/letter-treatment/9x16.mp4" target="_blank">9x16</a></p>
+        <p class="meta">Slug: <code>letter-treatment</code></p>
+      </div>
+    </div>
+    
+
+    <div class="card chassis-card" id="chassis-letter-treatment-scene">
+      <div class="card-media"><video class="chassis-video" autoplay muted loop playsinline preload="metadata" src="assets/video-chassis/letter-treatment-scene/1x1.mp4"></video></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>Letter Treatment — Scene Variant</h3>
+          <span class="badge badge-scene">scene variant</span>
+        </div>
+        <p class="use-when"><strong>Use when:</strong> Visual sibling of letter-treatment: paper-on-brand-color or handwriting-on-photo treatment.</p>
+        <p class="structure"><strong>Structure:</strong> letter on photographic background or paper texture</p>
+        <p class="aspects"><strong>Other aspects:</strong> <a href="assets/video-chassis/letter-treatment-scene/4x5.mp4" target="_blank">4x5</a> · <a href="assets/video-chassis/letter-treatment-scene/9x16.mp4" target="_blank">9x16</a></p>
+        <p class="meta">Slug: <code>letter-treatment-scene</code></p>
+      </div>
+    </div>
+    
+
+    <div class="card chassis-card" id="chassis-quote-stagger">
+      <div class="card-media"><video class="chassis-video" autoplay muted loop playsinline preload="metadata" src="assets/video-chassis/quote-stagger/1x1.mp4"></video></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>Quote Stagger</h3>
+          <span class="badge badge-main">main chassis</span>
+        </div>
+        <p class="use-when"><strong>Use when:</strong> Parent-voice testimonial. Letter-by-letter stagger reveals the quote at a readable cadence.</p>
+        <p class="structure"><strong>Structure:</strong> parent-quote letter-stagger reveal at 14 CPS</p>
+        <p class="aspects"><strong>Other aspects:</strong> <a href="assets/video-chassis/quote-stagger/4x5.mp4" target="_blank">4x5</a> · <a href="assets/video-chassis/quote-stagger/9x16.mp4" target="_blank">9x16</a></p>
+        <p class="meta">Slug: <code>quote-stagger</code></p>
+      </div>
+    </div>
+    
+
+    <div class="card chassis-card" id="chassis-stat-counter">
+      <div class="card-media"><video class="chassis-video" autoplay muted loop playsinline preload="metadata" src="assets/video-chassis/stat-counter/1x1.mp4"></video></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>Stat Counter</h3>
+          <span class="badge badge-main">main chassis</span>
+        </div>
+        <p class="use-when"><strong>Use when:</strong> Single hero stat carries the whole ad. Numeric punch (cost, time, percentage) is the message.</p>
+        <p class="structure"><strong>Structure:</strong> single hero stat with overshoot-punch animation</p>
+        <p class="aspects"><strong>Other aspects:</strong> <a href="assets/video-chassis/stat-counter/4x5.mp4" target="_blank">4x5</a> · <a href="assets/video-chassis/stat-counter/9x16.mp4" target="_blank">9x16</a></p>
+        <p class="meta">Slug: <code>stat-counter</code></p>
+      </div>
+    </div>
+    
+
+    <div class="card chassis-card" id="chassis-us-vs-them">
+      <div class="card-media"><video class="chassis-video" autoplay muted loop playsinline preload="metadata" src="assets/video-chassis/us-vs-them/1x1.mp4"></video></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>Us vs Them</h3>
+          <span class="badge badge-main">main chassis</span>
+        </div>
+        <p class="use-when"><strong>Use when:</strong> Side-by-side contrast against a competitor or alternative (urgent care, ER, generic telehealth).</p>
+        <p class="structure"><strong>Structure:</strong> split-screen contrast — color variant or photo variant</p>
+        <p class="aspects"><strong>Other aspects:</strong> <a href="assets/video-chassis/us-vs-them/4x5.mp4" target="_blank">4x5</a> · <a href="assets/video-chassis/us-vs-them/9x16.mp4" target="_blank">9x16</a></p>
+        <p class="meta">Slug: <code>us-vs-them</code></p>
+      </div>
+    </div>
+    
+
+    <div class="card chassis-card" id="chassis-us-vs-them-scene">
+      <div class="card-media"><video class="chassis-video" autoplay muted loop playsinline preload="metadata" src="assets/video-chassis/us-vs-them-scene/1x1.mp4"></video></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>Us vs Them — Scene Variant</h3>
+          <span class="badge badge-scene">scene variant</span>
+        </div>
+        <p class="use-when"><strong>Use when:</strong> Photo / scene variant of us-vs-them with real-world imagery instead of color blocks.</p>
+        <p class="structure"><strong>Structure:</strong> photo split-screen contrast</p>
+        <p class="aspects"><strong>Other aspects:</strong> <a href="assets/video-chassis/us-vs-them-scene/4x5.mp4" target="_blank">4x5</a> · <a href="assets/video-chassis/us-vs-them-scene/9x16.mp4" target="_blank">9x16</a></p>
+        <p class="meta">Slug: <code>us-vs-them-scene</code></p>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<section class="template-section" id="image-templates">
+  <h2>Image templates</h2>
+  <p class="section-blurb">
+    Static creative templates rendered via headless Chromium. Each template has 1+
+    layouts × 3 aspect ratios (1:1, 4:5, 9:16). The thumbnail shows the canonical
+    default layout at 1:1 — expand "Show all renders" for the full layout × aspect grid.
+    The matcher in <code>email-screenshot-to-template</code> uses these renders for
+    competitor-ad triage.
+  </p>
+  <details class="toc-block">
+    <summary>Quick jump · 30 templates</summary>
+    <div><a href="#tpl-ad-creative" class="toc-link">ad-creative</a><a href="#tpl-behind-the-scene" class="toc-link">behind-the-scene</a><a href="#tpl-billboard" class="toc-link">billboard</a><a href="#tpl-boundary-blocks" class="toc-link">boundary-blocks</a><a href="#tpl-case-study" class="toc-link">case-study</a><a href="#tpl-chart" class="toc-link">chart</a><a href="#tpl-comparison-vs" class="toc-link">comparison-vs</a><a href="#tpl-decision-stack" class="toc-link">decision-stack</a><a href="#tpl-feature-benefit" class="toc-link">feature-benefit</a><a href="#tpl-founder" class="toc-link">founder</a><a href="#tpl-infographic" class="toc-link">infographic</a><a href="#tpl-letter" class="toc-link">letter</a><a href="#tpl-listicle" class="toc-link">listicle</a><a href="#tpl-notes-screenshot" class="toc-link">notes-screenshot</a><a href="#tpl-offer-first-banner" class="toc-link">offer-first-banner</a><a href="#tpl-parent-forum-thread" class="toc-link">parent-forum-thread</a><a href="#tpl-parent-reddit-thread" class="toc-link">parent-reddit-thread</a><a href="#tpl-parent-testimonial-card" class="toc-link">parent-testimonial-card</a><a href="#tpl-pediatrician-expert" class="toc-link">pediatrician-expert</a><a href="#tpl-platform-mockup" class="toc-link">platform-mockup</a><a href="#tpl-post-it" class="toc-link">post-it</a><a href="#tpl-problem-agitation" class="toc-link">problem-agitation</a><a href="#tpl-quote-card" class="toc-link">quote-card</a><a href="#tpl-review-quote" class="toc-link">review-quote</a><a href="#tpl-social-post-mockup" class="toc-link">social-post-mockup</a><a href="#tpl-split-screen" class="toc-link">split-screen</a><a href="#tpl-stat-card" class="toc-link">stat-card</a><a href="#tpl-stat-comparison" class="toc-link">stat-comparison</a><a href="#tpl-transformation" class="toc-link">transformation</a><a href="#tpl-ugc-overlay" class="toc-link">ugc-overlay</a></div>
+  </details>
+  <div class="grid">
+    
+    <div class="card tpl-card" id="tpl-ad-creative">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/ad-creative/default__square_1_1.png" loading="lazy" alt="ad-creative canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>ad-creative</h3>
+          <span class="badge badge-img">1 layout</span>
+        </div>
+        <p class="summary">Meta-ready ad creative with headline, subhead, and CTA over a branded gradient.</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill">default</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          3 renders
+        </p>
+        <details>
+          <summary>Show all 3 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/ad-creative/default__portrait_4_5.png" loading="lazy" alt=""/><figcaption>default · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/ad-creative/default__square_1_1.png" loading="lazy" alt=""/><figcaption>default · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/ad-creative/default__story_9_16.png" loading="lazy" alt=""/><figcaption>default · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Meta-ready ad creative with headline, subhead, and CTA over a branded gradient. Supports 1:1, 4:5, and 9:16.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-behind-the-scene">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/behind-the-scene/caption-card__square_1_1.png" loading="lazy" alt="behind-the-scene canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>behind-the-scene</h3>
+          <span class="badge badge-img">5 layouts</span>
+        </div>
+        <p class="summary">Behind-the-scene — operator/workplace/process glimpse.</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill pill-default">caption-card</span><span class="pill">process-strip</span><span class="pill">tag-callout</span><span class="pill">agenda-overlay</span><span class="pill">contact-sheet</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          15 renders
+        </p>
+        <details>
+          <summary>Show all 15 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/behind-the-scene/agenda-overlay__portrait_4_5.png" loading="lazy" alt=""/><figcaption>agenda-overlay · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/behind-the-scene/agenda-overlay__square_1_1.png" loading="lazy" alt=""/><figcaption>agenda-overlay · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/behind-the-scene/agenda-overlay__story_9_16.png" loading="lazy" alt=""/><figcaption>agenda-overlay · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/behind-the-scene/caption-card__portrait_4_5.png" loading="lazy" alt=""/><figcaption>caption-card · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/behind-the-scene/caption-card__square_1_1.png" loading="lazy" alt=""/><figcaption>caption-card · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/behind-the-scene/caption-card__story_9_16.png" loading="lazy" alt=""/><figcaption>caption-card · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/behind-the-scene/contact-sheet__portrait_4_5.png" loading="lazy" alt=""/><figcaption>contact-sheet · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/behind-the-scene/contact-sheet__square_1_1.png" loading="lazy" alt=""/><figcaption>contact-sheet · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/behind-the-scene/contact-sheet__story_9_16.png" loading="lazy" alt=""/><figcaption>contact-sheet · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/behind-the-scene/process-strip__portrait_4_5.png" loading="lazy" alt=""/><figcaption>process-strip · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/behind-the-scene/process-strip__square_1_1.png" loading="lazy" alt=""/><figcaption>process-strip · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/behind-the-scene/process-strip__story_9_16.png" loading="lazy" alt=""/><figcaption>process-strip · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/behind-the-scene/tag-callout__portrait_4_5.png" loading="lazy" alt=""/><figcaption>tag-callout · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/behind-the-scene/tag-callout__square_1_1.png" loading="lazy" alt=""/><figcaption>tag-callout · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/behind-the-scene/tag-callout__story_9_16.png" loading="lazy" alt=""/><figcaption>tag-callout · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Behind-the-scene — operator/workplace/process glimpse. Motion H&amp;W #6 spend-use scale format. Single template with 5 layouts (caption-card, process-strip, tag-callout, agenda-overlay, contact-sheet) × 3 aspect ratios. Differentiation guardrails: operator/workplace photo (NOT customer/peer photo — use `ugc-overlay`); unnamed process visibility (NOT named-customer outcome — use `case-study`); the operation, often anonymous (NOT a named individual — use `founder`); photographic, not diagrammatic (NOT data-density — use `infographic`); editorial caption chrome, not platform UI (NOT post-inside-platform — use `social-post-mockup`); never foreground &#x27;Dr.&#x27; badges or medical-authority framing — that routes to `pediatrician-expert`. Compliance: no PHI in frame; staff identifiability requires release; describe the process, never claim a clinical outcome. Multi-photo layouts (process-strip, contact-sheet) iterate ctx.photos[]; single-photo layouts read ctx.photo.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-billboard">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/billboard/giant-headline__square_1_1.png" loading="lazy" alt="billboard canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>billboard</h3>
+          <span class="badge badge-img">5 layouts</span>
+        </div>
+        <p class="summary">Billboard — Motion H&amp;W spend-use scale format (#10 in H&amp;W, #3 in Fashion &amp; Apparel).</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill pill-default">giant-headline</span><span class="pill">word-stack</span><span class="pill">single-word-emphasis</span><span class="pill">two-line-contrast</span><span class="pill">headline-with-inset</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          15 renders
+        </p>
+        <details>
+          <summary>Show all 15 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/billboard/giant-headline__portrait_4_5.png" loading="lazy" alt=""/><figcaption>giant-headline · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/billboard/giant-headline__square_1_1.png" loading="lazy" alt=""/><figcaption>giant-headline · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/billboard/giant-headline__story_9_16.png" loading="lazy" alt=""/><figcaption>giant-headline · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/billboard/headline-with-inset__portrait_4_5.png" loading="lazy" alt=""/><figcaption>headline-with-inset · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/billboard/headline-with-inset__square_1_1.png" loading="lazy" alt=""/><figcaption>headline-with-inset · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/billboard/headline-with-inset__story_9_16.png" loading="lazy" alt=""/><figcaption>headline-with-inset · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/billboard/single-word-emphasis__portrait_4_5.png" loading="lazy" alt=""/><figcaption>single-word-emphasis · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/billboard/single-word-emphasis__square_1_1.png" loading="lazy" alt=""/><figcaption>single-word-emphasis · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/billboard/single-word-emphasis__story_9_16.png" loading="lazy" alt=""/><figcaption>single-word-emphasis · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/billboard/two-line-contrast__portrait_4_5.png" loading="lazy" alt=""/><figcaption>two-line-contrast · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/billboard/two-line-contrast__square_1_1.png" loading="lazy" alt=""/><figcaption>two-line-contrast · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/billboard/two-line-contrast__story_9_16.png" loading="lazy" alt=""/><figcaption>two-line-contrast · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/billboard/word-stack__portrait_4_5.png" loading="lazy" alt=""/><figcaption>word-stack · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/billboard/word-stack__square_1_1.png" loading="lazy" alt=""/><figcaption>word-stack · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/billboard/word-stack__story_9_16.png" loading="lazy" alt=""/><figcaption>word-stack · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Billboard — Motion H&amp;W spend-use scale format (#10 in H&amp;W, #3 in Fashion &amp; Apparel). One bold claim dominates the frame; OOH billboard rhetoric translated to paid-social statics. Single template with 5 layouts (giant-headline, word-stack, single-word-emphasis, two-line-contrast, headline-with-inset) x 3 aspect ratios (1:1, 4:5, 9:16). Pick the composition with the `layout` prop. Differentiation guardrails: makes a bold CLAIM (not a bold number like offer-first-banner); declarative/public voice (not intimate/first-person like letter); no simulated platform chrome (vs social-post-mockup); no narrative arc (vs case-study). All five layouts share one prop schema so meta-ad-creative can bulk-fill across layouts without branching.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-boundary-blocks">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/boundary-blocks/not-is-pairs__square_1_1.png" loading="lazy" alt="boundary-blocks canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>boundary-blocks</h3>
+          <span class="badge badge-img">2 layouts</span>
+        </div>
+        <p class="summary">Boundary-blocks — defines the brand by what it ISN&#x27;T paired with what it IS.</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill pill-default">not-is-pairs</span><span class="pill">x-vs-check-list</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          6 renders
+        </p>
+        <details>
+          <summary>Show all 6 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/boundary-blocks/not-is-pairs__portrait_4_5.png" loading="lazy" alt=""/><figcaption>not-is-pairs · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/boundary-blocks/not-is-pairs__square_1_1.png" loading="lazy" alt=""/><figcaption>not-is-pairs · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/boundary-blocks/not-is-pairs__story_9_16.png" loading="lazy" alt=""/><figcaption>not-is-pairs · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/boundary-blocks/x-vs-check-list__portrait_4_5.png" loading="lazy" alt=""/><figcaption>x-vs-check-list · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/boundary-blocks/x-vs-check-list__square_1_1.png" loading="lazy" alt=""/><figcaption>x-vs-check-list · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/boundary-blocks/x-vs-check-list__story_9_16.png" loading="lazy" alt=""/><figcaption>x-vs-check-list · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Boundary-blocks — defines the brand by what it ISN&#x27;T paired with what it IS. Single-entity scope (NOT cross-entity contrast — use `comparison-vs` for that). One template with 2 layouts (not-is-pairs, x-vs-check-list) × 3 aspect ratios. Differentiation guardrails: defines a SINGLE entity (the brand) by its boundaries; NO ranking among options (use `decision-stack`); NOT a pain-amplification ad (use `problem-agitation`); educational, teaching the audience what category fit looks like. Source: extracted from TR-PR-03 (boundary statement) — peace-of-mind-ads-v3 TRIAGE renders.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-case-study">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/case-study/pull-quote__square_1_1.png" loading="lazy" alt="case-study canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>case-study</h3>
+          <span class="badge badge-img">5 layouts</span>
+        </div>
+        <p class="summary">Case study (Motion H&amp;W #4 spend-use) — named-protagonist proof ads.</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill pill-default">pull-quote</span><span class="pill">metric-led</span><span class="pill">before-after</span><span class="pill">timeline-strip</span><span class="pill">data-card</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          15 renders
+        </p>
+        <details>
+          <summary>Show all 15 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/case-study/before-after__portrait_4_5.png" loading="lazy" alt=""/><figcaption>before-after · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/case-study/before-after__square_1_1.png" loading="lazy" alt=""/><figcaption>before-after · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/case-study/before-after__story_9_16.png" loading="lazy" alt=""/><figcaption>before-after · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/case-study/data-card__portrait_4_5.png" loading="lazy" alt=""/><figcaption>data-card · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/case-study/data-card__square_1_1.png" loading="lazy" alt=""/><figcaption>data-card · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/case-study/data-card__story_9_16.png" loading="lazy" alt=""/><figcaption>data-card · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/case-study/metric-led__portrait_4_5.png" loading="lazy" alt=""/><figcaption>metric-led · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/case-study/metric-led__square_1_1.png" loading="lazy" alt=""/><figcaption>metric-led · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/case-study/metric-led__story_9_16.png" loading="lazy" alt=""/><figcaption>metric-led · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/case-study/pull-quote__portrait_4_5.png" loading="lazy" alt=""/><figcaption>pull-quote · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/case-study/pull-quote__square_1_1.png" loading="lazy" alt=""/><figcaption>pull-quote · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/case-study/pull-quote__story_9_16.png" loading="lazy" alt=""/><figcaption>pull-quote · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/case-study/timeline-strip__portrait_4_5.png" loading="lazy" alt=""/><figcaption>timeline-strip · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/case-study/timeline-strip__square_1_1.png" loading="lazy" alt=""/><figcaption>timeline-strip · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/case-study/timeline-strip__story_9_16.png" loading="lazy" alt=""/><figcaption>timeline-strip · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Case study (Motion H&amp;W #4 spend-use) — named-protagonist proof ads. Single template with 5 layouts (pull-quote, metric-led, before-after, timeline-strip, data-card) × 3 aspect ratios (1:1, 4:5, 9:16). Layouts differ on structural dimension — use `layout` prop to select. Differentiation guardrails (see template.html header comment): no platform chrome (vs Social post mockup), third-person narrative only (vs Letter), requires protagonistName for before-after (vs Transformation), outcome-not-offer for metric-led (vs Offer-first banner).</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-chart">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/chart/default__square_1_1.png" loading="lazy" alt="chart canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>chart</h3>
+          <span class="badge badge-img">1 layout</span>
+        </div>
+        <p class="summary">Server-side Chart.js chart exported as PNG.</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill">default</span></p>
+        <p class="meta">
+          Default variant: <code>landscape_16_9</code> ·
+          4 renders
+        </p>
+        <details>
+          <summary>Show all 4 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/chart/default__landscape_16_9.png" loading="lazy" alt=""/><figcaption>default · landscape_16_9</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/chart/default__portrait_4_5.png" loading="lazy" alt=""/><figcaption>default · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/chart/default__square_1_1.png" loading="lazy" alt=""/><figcaption>default · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/chart/default__story_9_16.png" loading="lazy" alt=""/><figcaption>default · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Server-side Chart.js chart exported as PNG. Pass a standard Chart.js config under `chartConfig`. Brand-default Chart.js typography + axis grids are injected at render time so callers don&#x27;t need to restyle every chart.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-comparison-vs">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/comparison-vs/two-column-vs__square_1_1.png" loading="lazy" alt="comparison-vs canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>comparison-vs</h3>
+          <span class="badge badge-img">4 layouts</span>
+        </div>
+        <p class="summary">Comparison-vs — TWO OR MORE NAMED ENTITIES placed adjacent for direct contrast (Blueberry vs urgent care, vs nurse line, vs generic telehealth).</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill pill-default">two-column-vs</span><span class="pill">n-by-n-grid</span><span class="pill">hero-product-vs</span><span class="pill">checkmark-x-table</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          12 renders
+        </p>
+        <details>
+          <summary>Show all 12 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/comparison-vs/checkmark-x-table__portrait_4_5.png" loading="lazy" alt=""/><figcaption>checkmark-x-table · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/comparison-vs/checkmark-x-table__square_1_1.png" loading="lazy" alt=""/><figcaption>checkmark-x-table · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/comparison-vs/checkmark-x-table__story_9_16.png" loading="lazy" alt=""/><figcaption>checkmark-x-table · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/comparison-vs/hero-product-vs__portrait_4_5.png" loading="lazy" alt=""/><figcaption>hero-product-vs · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/comparison-vs/hero-product-vs__square_1_1.png" loading="lazy" alt=""/><figcaption>hero-product-vs · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/comparison-vs/hero-product-vs__story_9_16.png" loading="lazy" alt=""/><figcaption>hero-product-vs · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/comparison-vs/n-by-n-grid__portrait_4_5.png" loading="lazy" alt=""/><figcaption>n-by-n-grid · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/comparison-vs/n-by-n-grid__square_1_1.png" loading="lazy" alt=""/><figcaption>n-by-n-grid · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/comparison-vs/n-by-n-grid__story_9_16.png" loading="lazy" alt=""/><figcaption>n-by-n-grid · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/comparison-vs/two-column-vs__portrait_4_5.png" loading="lazy" alt=""/><figcaption>two-column-vs · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/comparison-vs/two-column-vs__square_1_1.png" loading="lazy" alt=""/><figcaption>two-column-vs · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/comparison-vs/two-column-vs__story_9_16.png" loading="lazy" alt=""/><figcaption>two-column-vs · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Comparison-vs — TWO OR MORE NAMED ENTITIES placed adjacent for direct contrast (Blueberry vs urgent care, vs nurse line, vs generic telehealth). One template with 4 layouts (two-column-vs, n-by-n-grid, hero-product-vs, checkmark-x-table) × 3 aspect ratios (1:1, 4:5, 9:16). Pick layout with the `layout` prop. Differentiation guardrails: cross-entity contrast (NOT one entity in two states — use `transformation` for that); NOT chaos vs calm on the same device (use `split-screen`); NOT a single hero claim (use `billboard`); NOT narrative proof (use `case-study`). All four layouts share a single prop schema so meta-ad-creative can bulk-fill across layouts without branching. Source: extracted from TR-SA-01 (waiting-room math), TR-SA-02 (nurse-line gap), TR-SA-03 (telehealth-without-otoscope) — peace-of-mind-ads-v3 TRIAGE renders.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-decision-stack">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/decision-stack/3-bar-vertical__square_1_1.png" loading="lazy" alt="decision-stack canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>decision-stack</h3>
+          <span class="badge badge-img">3 layouts</span>
+        </div>
+        <p class="summary">Decision-stack — 2-4 options where ONE is highlighted as the right answer.</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill pill-default">3-bar-vertical</span><span class="pill">3-card-horizontal</span><span class="pill">ranked-list</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          9 renders
+        </p>
+        <details>
+          <summary>Show all 9 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/decision-stack/3-bar-vertical__portrait_4_5.png" loading="lazy" alt=""/><figcaption>3-bar-vertical · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/decision-stack/3-bar-vertical__square_1_1.png" loading="lazy" alt=""/><figcaption>3-bar-vertical · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/decision-stack/3-bar-vertical__story_9_16.png" loading="lazy" alt=""/><figcaption>3-bar-vertical · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/decision-stack/3-card-horizontal__portrait_4_5.png" loading="lazy" alt=""/><figcaption>3-card-horizontal · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/decision-stack/3-card-horizontal__square_1_1.png" loading="lazy" alt=""/><figcaption>3-card-horizontal · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/decision-stack/3-card-horizontal__story_9_16.png" loading="lazy" alt=""/><figcaption>3-card-horizontal · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/decision-stack/ranked-list__portrait_4_5.png" loading="lazy" alt=""/><figcaption>ranked-list · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/decision-stack/ranked-list__square_1_1.png" loading="lazy" alt=""/><figcaption>ranked-list · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/decision-stack/ranked-list__story_9_16.png" loading="lazy" alt=""/><figcaption>ranked-list · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Decision-stack — 2-4 options where ONE is highlighted as the right answer. Reduces a fork-in-the-road to a tier list with the brand visually elevated. One template with 3 layouts (3-bar-vertical, 3-card-horizontal, ranked-list) × 3 aspect ratios. Differentiation guardrails: IMPLIED ranking with one winner (NOT cross-entity contrast — use `comparison-vs`); 2-4 items only (NOT 5+ unranked items — use `listicle`); decision-fatigue framing where the user is choosing between paths, NOT defining what something IS or ISN&#x27;T (use `boundary-blocks` for that). Source: extracted from TR-PA-03 (2am ER debate) — peace-of-mind-ads-v3 TRIAGE renders.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-feature-benefit">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/feature-benefit/3-feature__square_1_1.png" loading="lazy" alt="feature-benefit canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>feature-benefit</h3>
+          <span class="badge badge-img">4 layouts</span>
+        </div>
+        <p class="summary">Feature-benefit — N feature × benefit pairs.</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill pill-default">3-feature</span><span class="pill">4-feature</span><span class="pill">icon-grid</span><span class="pill">paired-feature</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          12 renders
+        </p>
+        <details>
+          <summary>Show all 12 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/feature-benefit/3-feature__portrait_4_5.png" loading="lazy" alt=""/><figcaption>3-feature · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/feature-benefit/3-feature__square_1_1.png" loading="lazy" alt=""/><figcaption>3-feature · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/feature-benefit/3-feature__story_9_16.png" loading="lazy" alt=""/><figcaption>3-feature · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/feature-benefit/4-feature__portrait_4_5.png" loading="lazy" alt=""/><figcaption>4-feature · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/feature-benefit/4-feature__square_1_1.png" loading="lazy" alt=""/><figcaption>4-feature · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/feature-benefit/4-feature__story_9_16.png" loading="lazy" alt=""/><figcaption>4-feature · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/feature-benefit/icon-grid__portrait_4_5.png" loading="lazy" alt=""/><figcaption>icon-grid · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/feature-benefit/icon-grid__square_1_1.png" loading="lazy" alt=""/><figcaption>icon-grid · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/feature-benefit/icon-grid__story_9_16.png" loading="lazy" alt=""/><figcaption>icon-grid · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/feature-benefit/paired-feature__portrait_4_5.png" loading="lazy" alt=""/><figcaption>paired-feature · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/feature-benefit/paired-feature__square_1_1.png" loading="lazy" alt=""/><figcaption>paired-feature · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/feature-benefit/paired-feature__story_9_16.png" loading="lazy" alt=""/><figcaption>paired-feature · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Feature-benefit — N feature × benefit pairs. Cross-vertical 5-9% hit rate. Highest-density format for parameterized bulk-fill (audience × offer × benefit grid). One template with 4 layouts (3-feature, 4-feature, icon-grid, paired-feature) × 3 aspect ratios. Differentiation guardrails: each row pairs a FEATURE with its BENEFIT (NOT a single claim per row — use `listicle`; NOT ranked-with-winner — use `decision-stack`; NOT stat-driven — use `infographic`); features are capabilities, benefits are outcomes; supports bulk variant generation. Source: data/templates/batch2/feature-benefit-research.md.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-founder">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/founder/portrait-left__square_1_1.png" loading="lazy" alt="founder canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>founder</h3>
+          <span class="badge badge-img">5 layouts</span>
+        </div>
+        <p class="summary">Founder — photo-led static ad.</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill pill-default">portrait-left</span><span class="pill">full-bleed</span><span class="pill">polaroid</span><span class="pill">signature</span><span class="pill">split-letter</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          15 renders
+        </p>
+        <details>
+          <summary>Show all 15 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/founder/full-bleed__portrait_4_5.png" loading="lazy" alt=""/><figcaption>full-bleed · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/founder/full-bleed__square_1_1.png" loading="lazy" alt=""/><figcaption>full-bleed · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/founder/full-bleed__story_9_16.png" loading="lazy" alt=""/><figcaption>full-bleed · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/founder/polaroid__portrait_4_5.png" loading="lazy" alt=""/><figcaption>polaroid · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/founder/polaroid__square_1_1.png" loading="lazy" alt=""/><figcaption>polaroid · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/founder/polaroid__story_9_16.png" loading="lazy" alt=""/><figcaption>polaroid · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/founder/portrait-left__portrait_4_5.png" loading="lazy" alt=""/><figcaption>portrait-left · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/founder/portrait-left__square_1_1.png" loading="lazy" alt=""/><figcaption>portrait-left · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/founder/portrait-left__story_9_16.png" loading="lazy" alt=""/><figcaption>portrait-left · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/founder/signature__portrait_4_5.png" loading="lazy" alt=""/><figcaption>signature · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/founder/signature__square_1_1.png" loading="lazy" alt=""/><figcaption>signature · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/founder/signature__story_9_16.png" loading="lazy" alt=""/><figcaption>signature · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/founder/split-letter__portrait_4_5.png" loading="lazy" alt=""/><figcaption>split-letter · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/founder/split-letter__square_1_1.png" loading="lazy" alt=""/><figcaption>split-letter · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/founder/split-letter__story_9_16.png" loading="lazy" alt=""/><figcaption>split-letter · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Founder — photo-led static ad. Motion H&amp;W hit-rate AND spend-use leaderboard format (CH-010). Named founder portrait + short first-person message or quote, framed to read as personally authored. Five layouts (portrait-left, full-bleed, polaroid, signature, split-letter) x three aspect ratios (1:1, 4:5, 9:16). Differentiation rules vs siblings: vs `letter` — photo-led not text-led; vs `case-study` — internal operator not customer; vs `quote-card` — requires photograph; vs `ugc-overlay` — editorial/portrait aesthetic not UGC-selfie; vs `review-quote` — no star rating; vs `feature-benefit` — one promise not feature list. Compliance: photo release assumed upstream (Blueberry-owned Drive assets); Sage / meta-ad-compliance must clear founder quote text before production; prefer parent-founder framing over physician-authority framing (physician-authority routes to pediatrician-expert template).</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-infographic">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/infographic/default__square_1_1.png" loading="lazy" alt="infographic canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>infographic</h3>
+          <span class="badge badge-img">1 layout</span>
+        </div>
+        <p class="summary">Branded stat infographic with a title, 3 key stats, and an optional footnote.</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill">default</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          3 renders
+        </p>
+        <details>
+          <summary>Show all 3 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/infographic/default__landscape_16_9.png" loading="lazy" alt=""/><figcaption>default · landscape_16_9</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/infographic/default__portrait_4_5.png" loading="lazy" alt=""/><figcaption>default · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/infographic/default__square_1_1.png" loading="lazy" alt=""/><figcaption>default · square_1_1</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Branded stat infographic with a title, 3 key stats, and an optional footnote.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-letter">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/letter/handwritten-note__square_1_1.png" loading="lazy" alt="letter canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>letter</h3>
+          <span class="badge badge-img">4 layouts</span>
+        </div>
+        <p class="summary">Letter — Motion H&amp;W punch-above format.</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill pill-default">handwritten-note</span><span class="pill">typed-letter</span><span class="pill">email-screenshot</span><span class="pill">rx-pad</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          12 renders
+        </p>
+        <details>
+          <summary>Show all 12 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/letter/email-screenshot__portrait_4_5.png" loading="lazy" alt=""/><figcaption>email-screenshot · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/letter/email-screenshot__square_1_1.png" loading="lazy" alt=""/><figcaption>email-screenshot · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/letter/email-screenshot__story_9_16.png" loading="lazy" alt=""/><figcaption>email-screenshot · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/letter/handwritten-note__portrait_4_5.png" loading="lazy" alt=""/><figcaption>handwritten-note · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/letter/handwritten-note__square_1_1.png" loading="lazy" alt=""/><figcaption>handwritten-note · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/letter/handwritten-note__story_9_16.png" loading="lazy" alt=""/><figcaption>handwritten-note · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/letter/rx-pad__portrait_4_5.png" loading="lazy" alt=""/><figcaption>rx-pad · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/letter/rx-pad__square_1_1.png" loading="lazy" alt=""/><figcaption>rx-pad · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/letter/rx-pad__story_9_16.png" loading="lazy" alt=""/><figcaption>rx-pad · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/letter/typed-letter__portrait_4_5.png" loading="lazy" alt=""/><figcaption>typed-letter · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/letter/typed-letter__square_1_1.png" loading="lazy" alt=""/><figcaption>typed-letter · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/letter/typed-letter__story_9_16.png" loading="lazy" alt=""/><figcaption>typed-letter · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Letter — Motion H&amp;W punch-above format. Static creative that visually mimics personal correspondence: handwritten note, typed letter on letterhead, email screenshot, or Rx-pad directive. Body copy in first person is the hero. Four layouts (handwritten-note, typed-letter, email-screenshot, rx-pad) x three aspect ratios. Pass `layout` in data to pick composition.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-listicle">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/listicle/numbered-rows__square_1_1.png" loading="lazy" alt="listicle canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>listicle</h3>
+          <span class="badge badge-img">3 layouts</span>
+        </div>
+        <p class="summary">Listicle — 3-7 numbered list items as the hero.</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill pill-default">numbered-rows</span><span class="pill">icon-rows</span><span class="pill">badge-list</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          9 renders
+        </p>
+        <details>
+          <summary>Show all 9 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/listicle/badge-list__portrait_4_5.png" loading="lazy" alt=""/><figcaption>badge-list · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/listicle/badge-list__square_1_1.png" loading="lazy" alt=""/><figcaption>badge-list · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/listicle/badge-list__story_9_16.png" loading="lazy" alt=""/><figcaption>badge-list · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/listicle/icon-rows__portrait_4_5.png" loading="lazy" alt=""/><figcaption>icon-rows · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/listicle/icon-rows__square_1_1.png" loading="lazy" alt=""/><figcaption>icon-rows · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/listicle/icon-rows__story_9_16.png" loading="lazy" alt=""/><figcaption>icon-rows · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/listicle/numbered-rows__portrait_4_5.png" loading="lazy" alt=""/><figcaption>numbered-rows · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/listicle/numbered-rows__square_1_1.png" loading="lazy" alt=""/><figcaption>numbered-rows · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/listicle/numbered-rows__story_9_16.png" loading="lazy" alt=""/><figcaption>numbered-rows · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Listicle — 3-7 numbered list items as the hero. Cross-vertical 5-9% hit rate; H&amp;W under-uses, opportunity to test before crowding. One template with 3 layouts (numbered-rows, icon-rows, badge-list) × 3 aspect ratios. Differentiation guardrails: 3-7 items with NO ranked winner (NOT 2-4 items WITH a winner — use `decision-stack`); items are claims/stats/benefits not features-with-benefits (NOT N feature × benefit pairs — use `feature-benefit`); items are top-level claims not bordered/handwritten reminders (NOT yellow sticky reminder — use `post-it`). Source: data/templates/batch2/listicle-research.md.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-notes-screenshot">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/notes-screenshot/notes-screenshot__square_1_1.png" loading="lazy" alt="notes-screenshot canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>notes-screenshot</h3>
+          <span class="badge badge-img">1 layout</span>
+        </div>
+        <p class="summary">Notes-screenshot — UGC ad creative styled as a full-bleed iPhone Notes app screenshot.</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill">default</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          3 renders
+        </p>
+        <details>
+          <summary>Show all 3 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/notes-screenshot/notes-screenshot__portrait_4_5.png" loading="lazy" alt=""/><figcaption>notes-screenshot · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/notes-screenshot/notes-screenshot__square_1_1.png" loading="lazy" alt=""/><figcaption>notes-screenshot · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/notes-screenshot/notes-screenshot__story_9_16.png" loading="lazy" alt=""/><figcaption>notes-screenshot · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Notes-screenshot — UGC ad creative styled as a full-bleed iPhone Notes app screenshot. The render IS the iPhone screen, edge-to-edge: status bar, Notes nav, date stamp, note body, and bottom toolbar — no surrounding canvas, no brand band, no CTA, no Sponsored fine-print. Meta overlays its own Sponsored label when the asset is uploaded as an ad. Brand placement happens *inside* the note body via an inline auto-link (e.g. paragraph with linkText: &#x27;Blueberry Pediatrics&#x27;). Stylized chrome (CSS-drawn, no Apple SF Symbols / iOS assets). Differentiation: vs social-post-mockup it&#x27;s single-author note-taking (no platform handle / engagement / verified badge); vs letter it has no opener/signature; vs ugc-overlay it&#x27;s typography-only on a white note canvas with no photograph.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-offer-first-banner">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/offer-first-banner/offer-left__square_1_1.png" loading="lazy" alt="offer-first-banner canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>offer-first-banner</h3>
+          <span class="badge badge-img">5 layouts</span>
+        </div>
+        <p class="summary">Offer-first banner — Motion H&amp;W spend-use scale format.</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill pill-default">offer-left</span><span class="pill">offer-stacked</span><span class="pill">badge-corner</span><span class="pill">full-bleed-offer</span><span class="pill">bundle-band</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          15 renders
+        </p>
+        <details>
+          <summary>Show all 15 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/offer-first-banner/badge-corner__portrait_4_5.png" loading="lazy" alt=""/><figcaption>badge-corner · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/offer-first-banner/badge-corner__square_1_1.png" loading="lazy" alt=""/><figcaption>badge-corner · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/offer-first-banner/badge-corner__story_9_16.png" loading="lazy" alt=""/><figcaption>badge-corner · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/offer-first-banner/bundle-band__portrait_4_5.png" loading="lazy" alt=""/><figcaption>bundle-band · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/offer-first-banner/bundle-band__square_1_1.png" loading="lazy" alt=""/><figcaption>bundle-band · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/offer-first-banner/bundle-band__story_9_16.png" loading="lazy" alt=""/><figcaption>bundle-band · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/offer-first-banner/full-bleed-offer__portrait_4_5.png" loading="lazy" alt=""/><figcaption>full-bleed-offer · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/offer-first-banner/full-bleed-offer__square_1_1.png" loading="lazy" alt=""/><figcaption>full-bleed-offer · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/offer-first-banner/full-bleed-offer__story_9_16.png" loading="lazy" alt=""/><figcaption>full-bleed-offer · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/offer-first-banner/offer-left__portrait_4_5.png" loading="lazy" alt=""/><figcaption>offer-left · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/offer-first-banner/offer-left__square_1_1.png" loading="lazy" alt=""/><figcaption>offer-left · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/offer-first-banner/offer-left__story_9_16.png" loading="lazy" alt=""/><figcaption>offer-left · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/offer-first-banner/offer-stacked__portrait_4_5.png" loading="lazy" alt=""/><figcaption>offer-stacked · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/offer-first-banner/offer-stacked__square_1_1.png" loading="lazy" alt=""/><figcaption>offer-stacked · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/offer-first-banner/offer-stacked__story_9_16.png" loading="lazy" alt=""/><figcaption>offer-stacked · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Offer-first banner — Motion H&amp;W spend-use scale format. Offer value is the hero element; photo/product is supporting or absent. Five composition layouts (offer-left, offer-stacked, badge-corner, full-bleed-offer, bundle-band) x three aspect ratios. Pass `layout` in data to pick composition.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-parent-forum-thread">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/parent-forum-thread/default__square_1_1.png" loading="lazy" alt="parent-forum-thread canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>parent-forum-thread</h3>
+          <span class="badge badge-img">1 layout</span>
+        </div>
+        <p class="summary">Stylized parent-community discussion mockup — multiple persona-tagged comments stacked in a clean forum-card aesthetic.</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill">default</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          3 renders
+        </p>
+        <details>
+          <summary>Show all 3 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/parent-forum-thread/default__portrait_4_5.png" loading="lazy" alt=""/><figcaption>default · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/parent-forum-thread/default__square_1_1.png" loading="lazy" alt=""/><figcaption>default · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/parent-forum-thread/default__story_9_16.png" loading="lazy" alt=""/><figcaption>default · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Stylized parent-community discussion mockup — multiple persona-tagged comments stacked in a clean forum-card aesthetic. Intentionally NOT Facebook chrome (no FB-blue, no FB Like/Reply rail, no FB profile rings). Generic &#x27;parent group&#x27; look. Reusable for any social-proof comment-thread set. Variants: square_1_1 (≤2 comments fit) / portrait_4_5 (4 comments, no reactions) / story_9_16 (4 comments + reactions). Comments accept persona/timestamp/body/likes/accentToken; regions supported but only set when verified. 
+
+Realism contract — apply BEFORE rendering, every time:
+  1. Per-comment business-model pass. Every claim in every comment must map to an in-scope feature of the product being mocked. For Blueberry Pediatrics: text/call only, never &#x27;video&#x27;; no ADHD-meds prescribing; no psychiatry. A claim that violates this in the OP body OR in any comment is a launch-blocker.
+  2. Per-comment medical-claim pass. If a comment names a diagnosis, condition, treatment verb, or specific outcome (&#x27;strep,&#x27; &#x27;diagnosed,&#x27; &#x27;treated,&#x27; &#x27;ear infection&#x27;), hold the chassis until Sage signs off. Don&#x27;t ship as flagged-but-unresolved.
+  3. Internal-consistency pass. No two comments may describe a feature the other contradicts. Walk the comments as a set.
+  4. Sort by likes/reactions DESC. Real forum threads default to top-engaged-first. Comments must be ordered DESC by the engagement metric shown.
+  5. Vocabulary establishment. The OP must name (or strongly imply) any term the comments use (&#x27;the kit,&#x27; &#x27;the chat&#x27;). No orphan references.
+  6. Answer-the-question / named-grounding. If the OP asks &#x27;what are you using&#x27; or similar, every comment must explicitly NAME the product/brand/feature it&#x27;s recommending. Vague endorsements (&#x27;honestly worth it,&#x27; &#x27;love it&#x27;) without naming the thing fail this gate — they read as fake because real parents answering a &#x27;what are you using&#x27; question always name what they use.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-parent-reddit-thread">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/parent-reddit-thread/default__square_1_1.png" loading="lazy" alt="parent-reddit-thread canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>parent-reddit-thread</h3>
+          <span class="badge badge-img">1 layout</span>
+        </div>
+        <p class="summary">Reddit-style discussion mockup — fictional subreddit + post + threaded comments.</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill">default</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          3 renders
+        </p>
+        <details>
+          <summary>Show all 3 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/parent-reddit-thread/default__portrait_4_5.png" loading="lazy" alt=""/><figcaption>default · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/parent-reddit-thread/default__square_1_1.png" loading="lazy" alt=""/><figcaption>default · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/parent-reddit-thread/default__story_9_16.png" loading="lazy" alt=""/><figcaption>default · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Reddit-style discussion mockup — fictional subreddit + post + threaded comments. Defensive against Reddit-brand confusion: no Reddit orange, no Reddit logo, made-up subreddit + made-up u/handles. Vote rail + u/handle + &#x27;points&#x27; + subreddit header give the Reddit feel; muted-blue chrome and brand lockup keep it visibly an ad. Reusable for any persona-tagged comment-thread set. Variants: square_1_1 (≤2 comments fit) / portrait_4_5 (3-4 comments) / story_9_16 (4 comments + vote rail visible). Comments accept handle/timestamp/body/points/accentToken; OP fields drive the post header. 
+
+Realism contract — apply BEFORE rendering, every time:
+  1. Per-comment business-model pass. Every claim in every comment must map to an in-scope feature of the product being mocked. For Blueberry Pediatrics: text/call only, never &#x27;video&#x27;; no ADHD-meds prescribing; no psychiatry. A claim that violates this in the OP body OR in any comment is a launch-blocker.
+  2. Per-comment medical-claim pass. If a comment names a diagnosis, condition, treatment verb, or specific outcome (&#x27;strep,&#x27; &#x27;diagnosed,&#x27; &#x27;treated,&#x27; &#x27;ear infection&#x27;), hold the chassis until Sage signs off. Don&#x27;t ship as flagged-but-unresolved.
+  3. Internal-consistency pass. No two comments may describe a feature the other contradicts (e.g. &#x27;chat feature&#x27; vs. &#x27;video&#x27; in the same fictional thread). Walk the comments as a set.
+  4. Sort by points DESC. Real Reddit threads default to top-voted-first. Comments must be ordered points DESC.
+  5. Vocabulary establishment. The OP must name (or strongly imply) any term the comments use (&#x27;the kit,&#x27; &#x27;the chat&#x27;). No orphan references.
+  6. Answer-the-question / named-grounding. If the OP asks &#x27;what are you using&#x27; or similar, every comment must explicitly NAME the product/brand/feature it&#x27;s recommending. Vague endorsements (&#x27;honestly worth it,&#x27; &#x27;love it&#x27;) without naming the thing fail this gate — they read as fake because real Redditors answering a &#x27;what are you using&#x27; question always name what they use.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-parent-testimonial-card">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/parent-testimonial-card/default__square_1_1.png" loading="lazy" alt="parent-testimonial-card canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>parent-testimonial-card</h3>
+          <span class="badge badge-img">1 layout</span>
+        </div>
+        <p class="summary">Parent-voice testimonial card with persona attribution (e.g., &#x27;Mom of 2&#x27;).</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill">default</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          3 renders
+        </p>
+        <details>
+          <summary>Show all 3 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/parent-testimonial-card/default__portrait_4_5.png" loading="lazy" alt=""/><figcaption>default · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/parent-testimonial-card/default__square_1_1.png" loading="lazy" alt=""/><figcaption>default · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/parent-testimonial-card/default__story_9_16.png" loading="lazy" alt=""/><figcaption>default · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Parent-voice testimonial card with persona attribution (e.g., &#x27;Mom of 2&#x27;). One quote per render. Reusable for any anonymized parent-quote carousel — feed (1:1, 4:5) or reels (9:16). Per-card accent color via `accentToken` (one of brand.secondaryYellow / Peach / Pink / Mint). Optional `region` field is supported but should ONLY be set when the source customer&#x27;s location is verified — leaving it empty is the FTC-safer default.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-pediatrician-expert">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/pediatrician-expert/white-coat-portrait__square_1_1.png" loading="lazy" alt="pediatrician-expert canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>pediatrician-expert</h3>
+          <span class="badge badge-img">3 layouts</span>
+        </div>
+        <p class="summary">Pediatrician-expert — clinician-authority static.</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill pill-default">white-coat-portrait</span><span class="pill">credential-frame</span><span class="pill">expert-quote</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          9 renders
+        </p>
+        <details>
+          <summary>Show all 9 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/pediatrician-expert/credential-frame__portrait_4_5.png" loading="lazy" alt=""/><figcaption>credential-frame · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/pediatrician-expert/credential-frame__square_1_1.png" loading="lazy" alt=""/><figcaption>credential-frame · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/pediatrician-expert/credential-frame__story_9_16.png" loading="lazy" alt=""/><figcaption>credential-frame · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/pediatrician-expert/expert-quote__portrait_4_5.png" loading="lazy" alt=""/><figcaption>expert-quote · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/pediatrician-expert/expert-quote__square_1_1.png" loading="lazy" alt=""/><figcaption>expert-quote · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/pediatrician-expert/expert-quote__story_9_16.png" loading="lazy" alt=""/><figcaption>expert-quote · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/pediatrician-expert/white-coat-portrait__portrait_4_5.png" loading="lazy" alt=""/><figcaption>white-coat-portrait · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/pediatrician-expert/white-coat-portrait__square_1_1.png" loading="lazy" alt=""/><figcaption>white-coat-portrait · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/pediatrician-expert/white-coat-portrait__story_9_16.png" loading="lazy" alt=""/><figcaption>white-coat-portrait · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Pediatrician-expert — clinician-authority static. Named board-certified pediatrician with credentials visible. Distinct from `founder` (operator voice without credential framing) and `letter` (correspondence framing). One template with 3 layouts (white-coat-portrait, credential-frame, expert-quote) × 3 aspect ratios. Differentiation guardrails: clinical authority framing with credentials shown (NOT operator/co-founder voice — use `founder`; NOT a customer or peer-voice photo — use `ugc-overlay` / `case-study`; NOT a typed letterhead — use `letter`). Compliance posture is stricter than `founder`: every claim, dose, treatment outcome, and superlative MUST be cleared by Sage / meta-ad-compliance. Keep credentials accurate (real degrees/board status). Source: data/templates/batch3/pediatrician-expert-research.md.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-platform-mockup">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/platform-mockup/email-inbox__square_1_1.png" loading="lazy" alt="platform-mockup canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>platform-mockup</h3>
+          <span class="badge badge-img">5 layouts</span>
+        </div>
+        <p class="summary">Platform-mockup — full-bleed iPhone screenshot (the render IS the phone screen, edge-to-edge).</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill pill-default">email-inbox</span><span class="pill">push-notification</span><span class="pill">app-screen-dark</span><span class="pill">lock-screen-alert</span><span class="pill">rx-chat</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          15 renders
+        </p>
+        <details>
+          <summary>Show all 15 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/platform-mockup/app-screen-dark__portrait_4_5.png" loading="lazy" alt=""/><figcaption>app-screen-dark · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/platform-mockup/app-screen-dark__square_1_1.png" loading="lazy" alt=""/><figcaption>app-screen-dark · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/platform-mockup/app-screen-dark__story_9_16.png" loading="lazy" alt=""/><figcaption>app-screen-dark · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/platform-mockup/email-inbox__portrait_4_5.png" loading="lazy" alt=""/><figcaption>email-inbox · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/platform-mockup/email-inbox__square_1_1.png" loading="lazy" alt=""/><figcaption>email-inbox · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/platform-mockup/email-inbox__story_9_16.png" loading="lazy" alt=""/><figcaption>email-inbox · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/platform-mockup/lock-screen-alert__portrait_4_5.png" loading="lazy" alt=""/><figcaption>lock-screen-alert · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/platform-mockup/lock-screen-alert__square_1_1.png" loading="lazy" alt=""/><figcaption>lock-screen-alert · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/platform-mockup/lock-screen-alert__story_9_16.png" loading="lazy" alt=""/><figcaption>lock-screen-alert · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/platform-mockup/push-notification__portrait_4_5.png" loading="lazy" alt=""/><figcaption>push-notification · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/platform-mockup/push-notification__square_1_1.png" loading="lazy" alt=""/><figcaption>push-notification · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/platform-mockup/push-notification__story_9_16.png" loading="lazy" alt=""/><figcaption>push-notification · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/platform-mockup/rx-chat__portrait_4_5.png" loading="lazy" alt=""/><figcaption>rx-chat · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/platform-mockup/rx-chat__square_1_1.png" loading="lazy" alt=""/><figcaption>rx-chat · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/platform-mockup/rx-chat__story_9_16.png" loading="lazy" alt=""/><figcaption>rx-chat · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Platform-mockup — full-bleed iPhone screenshot (the render IS the phone screen, edge-to-edge). 5 layouts: email-inbox (Mail-app inbox card), push-notification (lock-screen-style notification on dark wallpaper), app-screen-dark (Blueberry brand splash as if launching the app), lock-screen-alert (giant clock + alert card), rx-chat (Messages-app conversation). Each carries an accurate iOS status bar pulled from `_partials/ios/`. NO surrounding canvas, brand band, headline, CTA pill, or &#x27;Sponsored&#x27; fine-print — Meta overlays its own Sponsored label when uploaded. Brand placement happens *inside* the screenshot (sender name, app icon, doctor name in chat). Differentiation: post-inside-platform-chrome (X tweet, IG post, SMS thread, reddit comment) → `social-post-mockup`; typographic overlay on a UGC photo → `ugc-overlay`; ad with explicit headline + CTA → `ad-creative` / `offer-first-banner` / `billboard`.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-post-it">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/post-it/single-note__square_1_1.png" loading="lazy" alt="post-it canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>post-it</h3>
+          <span class="badge badge-img">3 layouts</span>
+        </div>
+        <p class="summary">Post-it — handwritten reminder/note on a yellow square.</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill pill-default">single-note</span><span class="pill">taped-corner</span><span class="pill">two-stickies</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          9 renders
+        </p>
+        <details>
+          <summary>Show all 9 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/post-it/single-note__portrait_4_5.png" loading="lazy" alt=""/><figcaption>single-note · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/post-it/single-note__square_1_1.png" loading="lazy" alt=""/><figcaption>single-note · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/post-it/single-note__story_9_16.png" loading="lazy" alt=""/><figcaption>single-note · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/post-it/taped-corner__portrait_4_5.png" loading="lazy" alt=""/><figcaption>taped-corner · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/post-it/taped-corner__square_1_1.png" loading="lazy" alt=""/><figcaption>taped-corner · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/post-it/taped-corner__story_9_16.png" loading="lazy" alt=""/><figcaption>taped-corner · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/post-it/two-stickies__portrait_4_5.png" loading="lazy" alt=""/><figcaption>two-stickies · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/post-it/two-stickies__square_1_1.png" loading="lazy" alt=""/><figcaption>two-stickies · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/post-it/two-stickies__story_9_16.png" loading="lazy" alt=""/><figcaption>two-stickies · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Post-it — handwritten reminder/note on a yellow square. Punch-above format (F&amp;A #1 hit-rate; H&amp;W under-represented = test-before-crowding opportunity). One template with 3 layouts (single-note, taped-corner, two-stickies) × 3 aspect ratios. Differentiation guardrails: handwritten-on-yellow note rhetoric (NOT printed letterhead — use `letter`; NOT pure typography in a card frame — use `quote-card`; NOT photo + typography — use `ugc-overlay`); reads like a parent&#x27;s reminder to themselves or a fridge note. Source: data/templates/batch2/post-it-research.md.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-problem-agitation">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/problem-agitation/pain-then-fix__square_1_1.png" loading="lazy" alt="problem-agitation canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>problem-agitation</h3>
+          <span class="badge badge-img">3 layouts</span>
+        </div>
+        <p class="summary">Problem-agitation — pain-point named, amplified, then resolved.</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill">pain-only</span><span class="pill">pain-amplified</span><span class="pill pill-default">pain-then-fix</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          9 renders
+        </p>
+        <details>
+          <summary>Show all 9 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/problem-agitation/pain-amplified__portrait_4_5.png" loading="lazy" alt=""/><figcaption>pain-amplified · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/problem-agitation/pain-amplified__square_1_1.png" loading="lazy" alt=""/><figcaption>pain-amplified · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/problem-agitation/pain-amplified__story_9_16.png" loading="lazy" alt=""/><figcaption>pain-amplified · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/problem-agitation/pain-only__portrait_4_5.png" loading="lazy" alt=""/><figcaption>pain-only · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/problem-agitation/pain-only__square_1_1.png" loading="lazy" alt=""/><figcaption>pain-only · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/problem-agitation/pain-only__story_9_16.png" loading="lazy" alt=""/><figcaption>pain-only · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/problem-agitation/pain-then-fix__portrait_4_5.png" loading="lazy" alt=""/><figcaption>pain-then-fix · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/problem-agitation/pain-then-fix__square_1_1.png" loading="lazy" alt=""/><figcaption>pain-then-fix · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/problem-agitation/pain-then-fix__story_9_16.png" loading="lazy" alt=""/><figcaption>pain-then-fix · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Problem-agitation — pain-point named, amplified, then resolved. Top-of-funnel pain framing. Mid-band hit rate but reliable. One template with 3 layouts (pain-only, pain-amplified, pain-then-fix) × 3 aspect ratios. pain-only states the pain on its own; pain-amplified adds 3 escalations; pain-then-fix is the full sequence with a brand resolution. Differentiation guardrails: pain-amplification rhetoric (NOT a boundary statement — use `boundary-blocks`; NOT a quote — use `quote-card`; NOT chronological before/after with explicit BEFORE/AFTER labels — use `transformation`); the rhetoric is &#x27;this hurts, here&#x27;s why, here&#x27;s how it stops.&#x27; Compliance: pain text must not imply medical danger or unsubstantiated outcome — Sage / meta-ad-compliance must clear. Source: data/templates/batch2/problem-agitation-research.md.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-quote-card">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/quote-card/default__square_1_1.png" loading="lazy" alt="quote-card canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>quote-card</h3>
+          <span class="badge badge-img">1 layout</span>
+        </div>
+        <p class="summary">Quote card with headshot/avatar + quote + attribution.</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill">default</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          3 renders
+        </p>
+        <details>
+          <summary>Show all 3 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/quote-card/default__portrait_4_5.png" loading="lazy" alt=""/><figcaption>default · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/quote-card/default__square_1_1.png" loading="lazy" alt=""/><figcaption>default · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/quote-card/default__story_9_16.png" loading="lazy" alt=""/><figcaption>default · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Quote card with headshot/avatar + quote + attribution. Single-layout testimonial / pull-quote ad. Square + portrait suit LinkedIn; story_9_16 suits Reels / Stories placements.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-review-quote">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/review-quote/app-store-card__square_1_1.png" loading="lazy" alt="review-quote canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>review-quote</h3>
+          <span class="badge badge-img">4 layouts</span>
+        </div>
+        <p class="summary">Review-quote — rated consumer verdict ad.</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill pill-default">app-store-card</span><span class="pill">rating-and-line</span><span class="pill">compact-rating-grid</span><span class="pill">trustpilot-style</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          12 renders
+        </p>
+        <details>
+          <summary>Show all 12 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/review-quote/app-store-card__portrait_4_5.png" loading="lazy" alt=""/><figcaption>app-store-card · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/review-quote/app-store-card__square_1_1.png" loading="lazy" alt=""/><figcaption>app-store-card · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/review-quote/app-store-card__story_9_16.png" loading="lazy" alt=""/><figcaption>app-store-card · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/review-quote/compact-rating-grid__portrait_4_5.png" loading="lazy" alt=""/><figcaption>compact-rating-grid · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/review-quote/compact-rating-grid__square_1_1.png" loading="lazy" alt=""/><figcaption>compact-rating-grid · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/review-quote/compact-rating-grid__story_9_16.png" loading="lazy" alt=""/><figcaption>compact-rating-grid · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/review-quote/rating-and-line__portrait_4_5.png" loading="lazy" alt=""/><figcaption>rating-and-line · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/review-quote/rating-and-line__square_1_1.png" loading="lazy" alt=""/><figcaption>rating-and-line · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/review-quote/rating-and-line__story_9_16.png" loading="lazy" alt=""/><figcaption>rating-and-line · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/review-quote/trustpilot-style__portrait_4_5.png" loading="lazy" alt=""/><figcaption>trustpilot-style · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/review-quote/trustpilot-style__square_1_1.png" loading="lazy" alt=""/><figcaption>trustpilot-style · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/review-quote/trustpilot-style__story_9_16.png" loading="lazy" alt=""/><figcaption>trustpilot-style · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Review-quote — rated consumer verdict ad. 5-star feel, app-store / product-review vernacular. One template with 4 layouts (app-store-card, rating-and-line, compact-rating-grid, trustpilot-style) × 3 aspect ratios. Differentiation guardrails: STAR RATING is required (NOT a quote without a rating — use `quote-card`); review-card vernacular not narrative arc (NOT named-protagonist proof — use `case-study`); platform-agnostic review chrome, not Twitter/IG/Reddit chrome (NOT post-inside-platform — use `social-post-mockup`). Source: data/templates/batch2/review-quote-research.md.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-social-post-mockup">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/social-post-mockup/x-tweet__square_1_1.png" loading="lazy" alt="social-post-mockup canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>social-post-mockup</h3>
+          <span class="badge badge-img">4 layouts</span>
+        </div>
+        <p class="summary">Social post mockup (Motion H&amp;W #1 spend-use) — ad wraps peer-voice body copy in simulated social-platform chrome.</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill pill-default">x-tweet</span><span class="pill">ig-post</span><span class="pill">sms-thread</span><span class="pill">reddit-comment</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          12 renders
+        </p>
+        <details>
+          <summary>Show all 12 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/social-post-mockup/ig-post__portrait_4_5.png" loading="lazy" alt=""/><figcaption>ig-post · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/social-post-mockup/ig-post__square_1_1.png" loading="lazy" alt=""/><figcaption>ig-post · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/social-post-mockup/ig-post__story_9_16.png" loading="lazy" alt=""/><figcaption>ig-post · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/social-post-mockup/reddit-comment__portrait_4_5.png" loading="lazy" alt=""/><figcaption>reddit-comment · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/social-post-mockup/reddit-comment__square_1_1.png" loading="lazy" alt=""/><figcaption>reddit-comment · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/social-post-mockup/reddit-comment__story_9_16.png" loading="lazy" alt=""/><figcaption>reddit-comment · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/social-post-mockup/sms-thread__portrait_4_5.png" loading="lazy" alt=""/><figcaption>sms-thread · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/social-post-mockup/sms-thread__square_1_1.png" loading="lazy" alt=""/><figcaption>sms-thread · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/social-post-mockup/sms-thread__story_9_16.png" loading="lazy" alt=""/><figcaption>sms-thread · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/social-post-mockup/x-tweet__portrait_4_5.png" loading="lazy" alt=""/><figcaption>x-tweet · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/social-post-mockup/x-tweet__square_1_1.png" loading="lazy" alt=""/><figcaption>x-tweet · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/social-post-mockup/x-tweet__story_9_16.png" loading="lazy" alt=""/><figcaption>x-tweet · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Social post mockup (Motion H&amp;W #1 spend-use) — ad wraps peer-voice body copy in simulated social-platform chrome. Single template with 4 layouts (x-tweet, ig-post, sms-thread, reddit-comment) x 3 aspect ratios (1:1, 4:5, 9:16). Layouts differ on platform chrome — pick with layout prop. Differentiation guardrails: body never carries an offer number (vs offer-first-banner), never opens with Dear X (vs letter), always includes platform chrome (vs case-study), uses authored peer copy not real UGC screenshots (vs ugc-overlay). Compliance: stylized-not-counterfeit platform chrome, our own @blueberrypediatrics handle by default, Sponsored label in finePrint where the ad could be read as organic.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-split-screen">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/split-screen/top-bottom-divider__square_1_1.png" loading="lazy" alt="split-screen canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>split-screen</h3>
+          <span class="badge badge-img">4 layouts</span>
+        </div>
+        <p class="summary">Split-screen — SAME entity in two states (chaos vs calm).</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill pill-default">top-bottom-divider</span><span class="pill">left-right-divider</span><span class="pill">phone-screen-pair</span><span class="pill">diagonal-split</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          12 renders
+        </p>
+        <details>
+          <summary>Show all 12 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/split-screen/diagonal-split__portrait_4_5.png" loading="lazy" alt=""/><figcaption>diagonal-split · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/split-screen/diagonal-split__square_1_1.png" loading="lazy" alt=""/><figcaption>diagonal-split · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/split-screen/diagonal-split__story_9_16.png" loading="lazy" alt=""/><figcaption>diagonal-split · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/split-screen/left-right-divider__portrait_4_5.png" loading="lazy" alt=""/><figcaption>left-right-divider · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/split-screen/left-right-divider__square_1_1.png" loading="lazy" alt=""/><figcaption>left-right-divider · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/split-screen/left-right-divider__story_9_16.png" loading="lazy" alt=""/><figcaption>left-right-divider · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/split-screen/phone-screen-pair__portrait_4_5.png" loading="lazy" alt=""/><figcaption>phone-screen-pair · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/split-screen/phone-screen-pair__square_1_1.png" loading="lazy" alt=""/><figcaption>phone-screen-pair · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/split-screen/phone-screen-pair__story_9_16.png" loading="lazy" alt=""/><figcaption>phone-screen-pair · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/split-screen/top-bottom-divider__portrait_4_5.png" loading="lazy" alt=""/><figcaption>top-bottom-divider · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/split-screen/top-bottom-divider__square_1_1.png" loading="lazy" alt=""/><figcaption>top-bottom-divider · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/split-screen/top-bottom-divider__story_9_16.png" loading="lazy" alt=""/><figcaption>top-bottom-divider · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Split-screen — SAME entity in two states (chaos vs calm). One template with 4 layouts (top-bottom-divider, left-right-divider, phone-screen-pair, diagonal-split) × 3 aspect ratios. Differentiation guardrails: SAME entity in two states (NOT a chronological before/after with explicit BEFORE/AFTER labels — use `transformation`); NOT cross-entity contrast — Blueberry vs urgent care (use `comparison-vs`); NOT a problem-only frame (use `problem-agitation`). Rhetoric: &#x27;WebMD spiral → clean chat with a pediatrician&#x27;, &#x27;cluttered counter → tidy counter on the same device.&#x27; The default layouts pair a browser-results card (chaos) with a doctor chat bubble (calm); these can be replaced via the search-results and doctor-message props. Source: extracted from TR-PA-01 (WebMD spiral) — peace-of-mind-ads-v3 TRIAGE renders. Research input: data/templates/batch2/split-screen-research.md.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-stat-card">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/stat-card/hero-number__square_1_1.png" loading="lazy" alt="stat-card canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>stat-card</h3>
+          <span class="badge badge-img">3 layouts</span>
+        </div>
+        <p class="summary">Stat-card — single huge stat as the hero.</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill pill-default">hero-number</span><span class="pill">number-with-photo</span><span class="pill">big-numeral</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          9 renders
+        </p>
+        <details>
+          <summary>Show all 9 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/stat-card/big-numeral__portrait_4_5.png" loading="lazy" alt=""/><figcaption>big-numeral · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/stat-card/big-numeral__square_1_1.png" loading="lazy" alt=""/><figcaption>big-numeral · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/stat-card/big-numeral__story_9_16.png" loading="lazy" alt=""/><figcaption>big-numeral · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/stat-card/hero-number__portrait_4_5.png" loading="lazy" alt=""/><figcaption>hero-number · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/stat-card/hero-number__square_1_1.png" loading="lazy" alt=""/><figcaption>hero-number · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/stat-card/hero-number__story_9_16.png" loading="lazy" alt=""/><figcaption>hero-number · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/stat-card/number-with-photo__portrait_4_5.png" loading="lazy" alt=""/><figcaption>number-with-photo · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/stat-card/number-with-photo__square_1_1.png" loading="lazy" alt=""/><figcaption>number-with-photo · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/stat-card/number-with-photo__story_9_16.png" loading="lazy" alt=""/><figcaption>number-with-photo · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Stat-card — single huge stat as the hero. One template with 3 layouts (hero-number, number-with-photo, big-numeral) × 3 aspect ratios. hero-number is a full-bleed branded card; number-with-photo places the number alongside a lifestyle photo; big-numeral is pure typography on a clean ground. Differentiation guardrails: ONE number is the entire ad (NOT 3 supporting stats — use `infographic`; NOT 2 numbers contrasted — use `stat-comparison`). Use when ONE number is enough to carry the message: &#x27;24/7&#x27;, &#x27;14 min&#x27;, &#x27;$0 copay&#x27;, &#x27;50 states&#x27;. Source: data/templates/batch2/stat-card-research.md.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-stat-comparison">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/stat-comparison/big-vs-big__square_1_1.png" loading="lazy" alt="stat-comparison canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>stat-comparison</h3>
+          <span class="badge badge-img">2 layouts</span>
+        </div>
+        <p class="summary">Stat-comparison — TWO numbers placed adjacent for direct contrast (pricing math, time math).</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill pill-default">big-vs-big</span><span class="pill">stacked-numbers</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          6 renders
+        </p>
+        <details>
+          <summary>Show all 6 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/stat-comparison/big-vs-big__portrait_4_5.png" loading="lazy" alt=""/><figcaption>big-vs-big · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/stat-comparison/big-vs-big__square_1_1.png" loading="lazy" alt=""/><figcaption>big-vs-big · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/stat-comparison/big-vs-big__story_9_16.png" loading="lazy" alt=""/><figcaption>big-vs-big · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/stat-comparison/stacked-numbers__portrait_4_5.png" loading="lazy" alt=""/><figcaption>stacked-numbers · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/stat-comparison/stacked-numbers__square_1_1.png" loading="lazy" alt=""/><figcaption>stacked-numbers · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/stat-comparison/stacked-numbers__story_9_16.png" loading="lazy" alt=""/><figcaption>stacked-numbers · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Stat-comparison — TWO numbers placed adjacent for direct contrast (pricing math, time math). One template with 2 layouts (big-vs-big, stacked-numbers) × 3 aspect ratios. Differentiation guardrails: TWO numbers (NOT three supporting stats — use `infographic`; NOT one hero number — use `stat-card`); the contrast IS the message; use for $ vs $, time vs time, count vs count. For non-numeric cross-entity contrast use `comparison-vs`. Source: extracted from TR-PR-01 (insurance math) — peace-of-mind-ads-v3 TRIAGE renders.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-transformation">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/transformation/arrow-transition__square_1_1.png" loading="lazy" alt="transformation canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>transformation</h3>
+          <span class="badge badge-img">5 layouts</span>
+        </div>
+        <p class="summary">Transformation — Motion H&amp;W spend-use scale format (#9).</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill">side-by-side</span><span class="pill pill-default">arrow-transition</span><span class="pill">timeline-of-change</span><span class="pill">split-diagonal</span><span class="pill">stat-delta</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          15 renders
+        </p>
+        <details>
+          <summary>Show all 15 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/transformation/arrow-transition__portrait_4_5.png" loading="lazy" alt=""/><figcaption>arrow-transition · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/transformation/arrow-transition__square_1_1.png" loading="lazy" alt=""/><figcaption>arrow-transition · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/transformation/arrow-transition__story_9_16.png" loading="lazy" alt=""/><figcaption>arrow-transition · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/transformation/side-by-side__portrait_4_5.png" loading="lazy" alt=""/><figcaption>side-by-side · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/transformation/side-by-side__square_1_1.png" loading="lazy" alt=""/><figcaption>side-by-side · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/transformation/side-by-side__story_9_16.png" loading="lazy" alt=""/><figcaption>side-by-side · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/transformation/split-diagonal__portrait_4_5.png" loading="lazy" alt=""/><figcaption>split-diagonal · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/transformation/split-diagonal__square_1_1.png" loading="lazy" alt=""/><figcaption>split-diagonal · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/transformation/split-diagonal__story_9_16.png" loading="lazy" alt=""/><figcaption>split-diagonal · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/transformation/stat-delta__portrait_4_5.png" loading="lazy" alt=""/><figcaption>stat-delta · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/transformation/stat-delta__square_1_1.png" loading="lazy" alt=""/><figcaption>stat-delta · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/transformation/stat-delta__story_9_16.png" loading="lazy" alt=""/><figcaption>stat-delta · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/transformation/timeline-of-change__portrait_4_5.png" loading="lazy" alt=""/><figcaption>timeline-of-change · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/transformation/timeline-of-change__square_1_1.png" loading="lazy" alt=""/><figcaption>timeline-of-change · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/transformation/timeline-of-change__story_9_16.png" loading="lazy" alt=""/><figcaption>timeline-of-change · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">Transformation — Motion H&amp;W spend-use scale format (#9). Two discrete states (BEFORE/AFTER) presented adjacently with a direction signal. For Blueberry, the transformation is an access/time lifestyle shift (3am ER waiting room -&gt; 14-minute video visit), not a medical outcome. Single template with 5 layouts (side-by-side, arrow-transition, timeline-of-change, split-diagonal, stat-delta) x 3 aspect ratios (1:1, 4:5, 9:16). Differentiation: transformation shows an EXPLICIT state change (vs offer-first-banner&#x27;s price/offer), uses authored brand typography (vs social-post-mockup platform chrome), is comparative/paired (vs letter&#x27;s single-state first-person), is two-states-at-a-glance (vs case-study&#x27;s narrative arc), is explicit-with-labels (vs billboard two-line-contrast&#x27;s implied opposition), works typographically with no photo dependency (vs ugc-overlay&#x27;s photo requirement). All five layouts share one prop schema so meta-ad-creative can bulk-fill across layouts without branching.</p>
+        </details>
+      </div>
+    </div>
+    
+
+    <div class="card tpl-card" id="tpl-ugc-overlay">
+      <div class="card-media"><img class="tpl-thumb" src="assets/image-templates/ugc-overlay/bottom-text-bar__square_1_1.png" loading="lazy" alt="ugc-overlay canonical render" /></div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>ugc-overlay</h3>
+          <span class="badge badge-img">6 layouts</span>
+        </div>
+        <p class="summary">UGC overlay (Motion H&amp;W #7 spend-use) — full-bleed UGC photograph with authored typographic overlay.</p>
+        <p class="layouts-line"><strong>Layouts:</strong> <span class="pill pill-default">bottom-text-bar</span><span class="pill">sticker-caption</span><span class="pill">handwritten-annotation</span><span class="pill">meme-text</span><span class="pill">screenshot-caption</span><span class="pill">snap-caption</span></p>
+        <p class="meta">
+          Default variant: <code>square_1_1</code> ·
+          18 renders
+        </p>
+        <details>
+          <summary>Show all 18 renders</summary>
+          <div class="render-grid"><figure class="render-cell"><img src="assets/image-templates/ugc-overlay/bottom-text-bar__portrait_4_5.png" loading="lazy" alt=""/><figcaption>bottom-text-bar · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/ugc-overlay/bottom-text-bar__square_1_1.png" loading="lazy" alt=""/><figcaption>bottom-text-bar · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/ugc-overlay/bottom-text-bar__story_9_16.png" loading="lazy" alt=""/><figcaption>bottom-text-bar · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/ugc-overlay/handwritten-annotation__portrait_4_5.png" loading="lazy" alt=""/><figcaption>handwritten-annotation · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/ugc-overlay/handwritten-annotation__square_1_1.png" loading="lazy" alt=""/><figcaption>handwritten-annotation · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/ugc-overlay/handwritten-annotation__story_9_16.png" loading="lazy" alt=""/><figcaption>handwritten-annotation · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/ugc-overlay/meme-text__portrait_4_5.png" loading="lazy" alt=""/><figcaption>meme-text · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/ugc-overlay/meme-text__square_1_1.png" loading="lazy" alt=""/><figcaption>meme-text · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/ugc-overlay/meme-text__story_9_16.png" loading="lazy" alt=""/><figcaption>meme-text · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/ugc-overlay/screenshot-caption__portrait_4_5.png" loading="lazy" alt=""/><figcaption>screenshot-caption · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/ugc-overlay/screenshot-caption__square_1_1.png" loading="lazy" alt=""/><figcaption>screenshot-caption · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/ugc-overlay/screenshot-caption__story_9_16.png" loading="lazy" alt=""/><figcaption>screenshot-caption · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/ugc-overlay/snap-caption__portrait_4_5.png" loading="lazy" alt=""/><figcaption>snap-caption · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/ugc-overlay/snap-caption__square_1_1.png" loading="lazy" alt=""/><figcaption>snap-caption · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/ugc-overlay/snap-caption__story_9_16.png" loading="lazy" alt=""/><figcaption>snap-caption · story_9_16</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/ugc-overlay/sticker-caption__portrait_4_5.png" loading="lazy" alt=""/><figcaption>sticker-caption · portrait_4_5</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/ugc-overlay/sticker-caption__square_1_1.png" loading="lazy" alt=""/><figcaption>sticker-caption · square_1_1</figcaption></figure><figure class="render-cell"><img src="assets/image-templates/ugc-overlay/sticker-caption__story_9_16.png" loading="lazy" alt=""/><figcaption>sticker-caption · story_9_16</figcaption></figure></div>
+        </details>
+        <details class="desc-details">
+          <summary>Full description</summary>
+          <p class="desc">UGC overlay (Motion H&amp;W #7 spend-use) — full-bleed UGC photograph with authored typographic overlay. Six layouts (bottom-text-bar, sticker-caption, handwritten-annotation, meme-text, screenshot-caption, snap-caption) x three aspect ratios (1:1, 4:5, 9:16). Typography is the ad layer; photograph is the trust layer. Differentiation guardrails: overlay never wraps in platform chrome (vs social-post-mockup), never includes a separate quote card (vs case-study / quote-card), never opens with &#x27;Dear X&#x27; (vs letter), never leads with a numeric offer (vs offer-first-banner), always photograph-based (vs billboard). Compliance: photograph release is assumed upstream; overlay is authored peer-voice copy (not verbatim customer quotes unless released); Sponsored label required in finePrint.</p>
+        </details>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Blueberry Creative Templates Overview · generated by Ember (fb-ad-agent)<br/>
+  Source of truth: per-template <code>config.json</code> files in
+  <code>puppeteer-asset-render/templates/</code> and chassis compositions in
+  <code>meta-ad-video/compositions/</code>.<br/>
+  This page is hosted via a Cloudflare quick tunnel; the URL is ephemeral and dies
+  with the agent container. For a stable URL, host on GCS / GitHub Pages.
+</footer>
+
+</body>
+</html>

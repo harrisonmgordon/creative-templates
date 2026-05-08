@@ -1,0 +1,13 @@
+{
+  "layout": "ranked-list",
+  "headlineHtml": "Best move <span class=\"accent\">at 11pm.</span>",
+  "subhead": "Ranked by what gets your kid back to sleep fastest.",
+  "options": [
+    { "label": "Text Blueberry", "detail": "~30 min, no copay", "hero": true },
+    { "label": "Urgent care", "detail": "1.5 hr drive + wait" },
+    { "label": "Wait it out", "detail": "Hope it's nothing" },
+    { "label": "ER", "detail": "Last resort, $300+" }
+  ],
+  "offer": "$20/mo · No copays",
+  "cta": "Sign up"
+}
