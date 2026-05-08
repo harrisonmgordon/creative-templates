@@ -558,8 +558,9 @@ def render_html(chassis: list[dict], templates: list[dict]) -> str:
   Source of truth: per-template <code>config.json</code> files in
   <code>puppeteer-asset-render/templates/</code> and chassis compositions in
   <code>meta-ad-video/compositions/</code>.<br/>
-  This page is hosted via a Cloudflare quick tunnel; the URL is ephemeral and dies
-  with the agent container. For a stable URL, host on GCS / GitHub Pages.
+  Hosted on Cloudflare. Source repo:
+  <a href="https://github.com/harrisonmgordon/creative-templates">harrisonmgordon/creative-templates</a>
+  — auto-deploys on push to <code>main</code>.
 </footer>
 
 </body>

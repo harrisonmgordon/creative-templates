@@ -26,7 +26,9 @@ This repo is a generated artifact published for browsing. To update it, regenera
 
 ## Hosting
 
-Connected to **Cloudflare Pages**. Every push to `main` auto-deploys to the production URL.
+Live at **https://creative-templates.harrison-m-gordon.workers.dev/** — served by Cloudflare (Workers Static Assets). Every push to `main` auto-deploys.
+
+CF build configuration: framework preset `None`, build command empty, build output directory `public`.
 
 ## Maintainer
 
