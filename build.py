@@ -19,7 +19,7 @@ import html
 from datetime import date
 from pathlib import Path
 
-ROOT = Path("/workspace/data/templates-overview")
+ROOT = Path("/workspace/data/templates-overview/public")
 IMG_TPL_SRC = Path("/workspace/.claude/skills/puppeteer-asset-render/templates")
 VIDEO_SRC = Path("/workspace/data/meta-ad-video")
 

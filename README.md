@@ -4,10 +4,16 @@ A static catalog of the ad-creative templates (image + motion-native video) buil
 
 ## What's in here
 
-- **`index.html`** — the rendered overview page. Single-file dark-themed catalog with sticky section nav.
-- **`assets/image-templates/`** — sample renders for the 30 image templates that drive `puppeteer-asset-render`. Each template has 1:1, 4:5, and 9:16 variants.
-- **`assets/video-chassis/`** — short MP4 previews of the motion-native video chassis built on the HyperFrames pipeline (cold-open, stat-counter, us-vs-them, quote-stagger, before-after-scenario, if-then-rules, letter-treatment).
-- **`build.py`** — generator script. Walks the source-of-truth template/chassis directories and rebuilds `index.html`. Lives outside the served output and is not deployed.
+Served content (Cloudflare Pages output directory: `public/`):
+
+- **`public/index.html`** — the rendered overview page. Single-file dark-themed catalog with sticky section nav.
+- **`public/assets/image-templates/`** — sample renders for the 30 image templates that drive `puppeteer-asset-render`. Each template has 1:1, 4:5, and 9:16 variants.
+- **`public/assets/video-chassis/`** — short MP4 previews of the motion-native video chassis built on the HyperFrames pipeline (cold-open, stat-counter, us-vs-them, quote-stagger, before-after-scenario, if-then-rules, letter-treatment).
+
+Repo-only (not deployed):
+
+- **`build.py`** — generator script. Walks the source-of-truth template/chassis directories and rebuilds `public/index.html`. Runs from the agent container.
+- **`README.md`**, **`.gitignore`**.
 
 ## Source of truth
 
