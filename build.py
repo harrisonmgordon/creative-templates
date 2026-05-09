@@ -87,6 +87,12 @@ CHASSIS_META = {
         "structure": "letter on photographic background or paper texture",
         "kind": "scene",
     },
+    "imessage-thread-reveal": {
+        "title": "iMessage Thread Reveal",
+        "use_when": "Overheard parent-friend dialogue. Worry → reassurance peer-to-peer recommendation framed as an iMessage thread; pure-iOS chrome with configurable per-bubble tapback reactions.",
+        "structure": "gray Q-bubble + exclamation tapback → blue A-bubble + heart tapback → brand end-card",
+        "kind": "main",
+    },
 }
 
 # ─── Helpers ─────────────────────────────────────────────────────────────
