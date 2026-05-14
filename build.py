@@ -93,6 +93,18 @@ CHASSIS_META = {
         "structure": "gray Q-bubble + exclamation tapback → blue A-bubble + heart tapback → brand end-card",
         "kind": "main",
     },
+    "x-tweet-reveal": {
+        "title": "X (Twitter) Tweet — Reveal",
+        "use_when": "Viral parent-voice testimonial framed as a screenshot of an X post coming alive in the feed. Layered-motion variant: paragraphs stagger in, yellow highlights wipe over key claims in narrative order, action-bar heart fills as the conversion punctuation.",
+        "structure": "X-chrome lands → 7-paragraph parent-voice tweet body staggers in → 4 yellow highlight wipes (1am screaming → under 5 minutes → No urgent care → Unlimited visits, $18/mo) → heart-fill overshoot",
+        "kind": "main",
+    },
+    "x-tweet-highlights-only": {
+        "title": "X (Twitter) Tweet — Highlights Only",
+        "use_when": "Minimal-motion sibling of x-tweet-reveal. Whole tweet visible at frame 0; the only animation is the four yellow highlight wipes on a 1.0s cadence. Use when you want the tweet to read as a static screenshot with just the eyebrow of motion that highlight-passing-over-words provides.",
+        "structure": "static tweet at frame 0 → 4 sequential highlight wipes (top-to-bottom, 1.0s cadence) → hold",
+        "kind": "main",
+    },
 }
 
 # ─── Helpers ─────────────────────────────────────────────────────────────
