@@ -175,6 +175,14 @@ def load_image_templates() -> list[dict]:
         cfg = json.loads(cfg_path.read_text())
         name = d.name
         default_layout = cfg.get("defaults", {}).get("layout")
+        # Only surface templates that have at least one committed render.
+        # The public gallery is client-facing; its established invariant is
+        # "no imageless cards." Templates whose renders haven't been synced
+        # here yet are skipped rather than shown as "no example render"
+        # placeholders. Add the renders under
+        # public/assets/image-templates/<name>/ to include them.
+        if not list_all_variant_renders(name):
+            continue
         out.append({
             "name": name,
             "description": cfg.get("description", ""),
